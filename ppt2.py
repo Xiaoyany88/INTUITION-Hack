@@ -59,7 +59,8 @@ txBox1.text_frame.auto_size = True
 txBox2.text_frame.auto_size = True
 
 #kasjdiashdiashd
-# counter = summarizer()
-# print(counter)
+counter = summarizer()
+print(counter)
+print("hello")
 
 prs.save('example.pptx')

@@ -29,9 +29,9 @@ def showPaperSummary(paperContent):
     tldr_tag = "\n tl;dr:"
     # openai.organization = 'organization key'
     
-    openai.api_key = os.getenv("OPEN_API_KEY")
+    openai.api_key = "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"
     engine_list = openai.Engine.list() # calling the engines available from the openai api 
-    
+    counter = 0
     for page in paperContent:    
         text = page.extract_text() + tldr_tag
         response = openai.Completion.create(engine="davinci",prompt=text,temperature=0.3,
@@ -44,21 +44,23 @@ def showPaperSummary(paperContent):
         print(response["choices"][0]["text"])
         generated_text = response["choices"][0]["text"]
         with open("summary.txt", "a") as file:
+            if (generated_text == ""):
+                continue
+            counter += 1
             file.write(generated_text + "\n")
             file.write("\n---\n\n")
+    return counter
         
-def main():
+def summarizer():
     # paperFilePath = "Research article sample.pdf"
     configure()
-    paper_url = "https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_pdf/fe/ae/nihms-1849852.PMC9805511.pdf"
-    paperFilePath = getPaper(paper_url)
-    paperFilePath = "./random_paper1.pdf"
+    # paper_url = "https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_pdf/fe/ae/nihms-1849852.PMC9805511.pdf"
+    # paperFilePath = getPaper(paper_url)
+    paperFilePath = "database/nihms-1857952.PMC9797056.pdf"
     paperContent = pdfplumber.open(paperFilePath).pages
-    showPaperSummary(paperContent)
+    counter = showPaperSummary(paperContent)
+    return counter
 
-
-configure()
-print(os.getenv("API_KEY"))
 
 
 
