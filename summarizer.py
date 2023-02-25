@@ -3,7 +3,12 @@ import wget
 import pathlib
 import pdfplumber
 import numpy as np
+import os
 
+from dotenv import load_dotenv
+
+def configure():
+    load_dotenv()
 def getPaper(paper_url, filename="random_paper1.pdf"):
     """
     Downloads a paper from it's arxiv page and returns
@@ -14,12 +19,6 @@ def getPaper(paper_url, filename="random_paper1.pdf"):
 
     return downloadedPaperFilePath
 
-# paperFilePath = "Research article sample.pdf"
-paper_url = "https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_pdf/fe/ae/nihms-1849852.PMC9805511.pdf"
-paperFilePath = getPaper(paper_url)
-paperFilePath = "./random_paper1.pdf"
-paperContent = pdfplumber.open(paperFilePath).pages
-
 def displayPaperContent(paperContent, page_start=0, page_end=5):
     for page in paperContent[page_start:page_end]:
         print(page.extract_text())
@@ -28,7 +27,8 @@ def displayPaperContent(paperContent, page_start=0, page_end=5):
 def showPaperSummary(paperContent):
     tldr_tag = "\n tl;dr:"
     # openai.organization = 'organization key'
-    openai.api_key = "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"
+    
+    openai.api_key = os.getenv("API_KEY")
     engine_list = openai.Engine.list() # calling the engines available from the openai api 
     
     for page in paperContent:    
@@ -46,9 +46,14 @@ def showPaperSummary(paperContent):
             file.write(generated_text + "\n")
             file.write("\n---\n\n")
         
+def main():
+    # paperFilePath = "Research article sample.pdf"
+    load_dotenv()
+    paper_url = "https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_pdf/fe/ae/nihms-1849852.PMC9805511.pdf"
+    paperFilePath = getPaper(paper_url)
+    paperFilePath = "./random_paper1.pdf"
+    paperContent = pdfplumber.open(paperFilePath).pages
+    showPaperSummary(paperContent)
 
-    
-
-
-showPaperSummary(paperContent)
+main()
 
