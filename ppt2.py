@@ -3,6 +3,9 @@ import collections.abc
 from pptx import Presentation
 from pptx.util import Inches, Pt
 from font_size import *
+import requests
+from bs4 import BeautifulSoup
+from io import BytesIO
 
 def new_slide(prs, text):
     slide = prs.slides.add_slide(prs.slide_layouts[6])

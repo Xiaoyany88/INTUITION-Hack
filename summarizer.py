@@ -20,12 +20,14 @@ def getPaper(paper_url, filename="random_paper1.pdf"):
 
     return downloadedPaperFilePath
 
+# displays the entirety of text information in the Paper
 def displayPaperContent(paperContent, page_start=0, page_end=5):
     for page in paperContent[page_start:page_end]:
         print(page.extract_text())
 #displayPaperContent(paperContent)
-    
-def showPaperSummary(paperContent):
+
+# displays the summarized version of the Paper, using openai davinci
+def showPaperSummary(paperContent, prs):
     tldr_tag = "\n tl;dr:"
     # openai.organization = 'organization key'
 
