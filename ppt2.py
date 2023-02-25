@@ -46,6 +46,8 @@ def new_slide(prs, text):
     keywords = [word for word, pos in pos_tags if pos in ['NN', 'NNS', 'NNP', 'NNPS']]
     if keywords == []:
         return
+    if "prudence" in keywords:
+        keywords.remove("prudence")
 
     index = 0
     if len(keywords) > 3:
