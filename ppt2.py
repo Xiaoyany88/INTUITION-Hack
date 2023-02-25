@@ -58,7 +58,17 @@ txBox2.text_frame.word_wrap = True
 txBox1.text_frame.auto_size = True
 txBox2.text_frame.auto_size = True
 
-#kasjdiashdiashd
+
+# Background Images
+img_path = "database/picture_2.png"
+left = top = Inches(0)
+pic = slide.shapes.add_picture(img_path, left, top, width=prs.slide_width, height=prs.slide_height)
+
+# This moves it to the background
+slide.shapes._spTree.remove(pic._element)
+slide.shapes._spTree.insert(2, pic._element)
+
+
 counter = summarizer()
 print(counter)
 print("hello")
