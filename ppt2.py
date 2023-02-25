@@ -4,7 +4,7 @@ from summarizer import *
 from font_size import *
 
 
-f = open('summary.txt', 'r', encoding='cp1252')
+f = open('summary.txt', 'r', encoding='utf-8')
 txt = f.read()
 f.close()
 print(txt)
