@@ -4,6 +4,7 @@ from pptx import Presentation
 from pptx.util import Inches, Pt
 from summarizer import *
 from font_size import *
+from PIL import Image
 
 if __name__ == '__main__':
 
@@ -61,6 +62,8 @@ if __name__ == '__main__':
 
     # Background Images
     img_path = "database/picture_2.png"
+    im = Image.open('/var/www/examples/heroine.png')
+    im.putalpha(100)
     left = top = Inches(0)
     pic = slide.shapes.add_picture(img_path, left, top, width=prs.slide_width, height=prs.slide_height)
 
