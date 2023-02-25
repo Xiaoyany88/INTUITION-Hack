@@ -29,7 +29,7 @@ def showPaperSummary(paperContent):
     tldr_tag = "\n tl;dr:"
     # openai.organization = 'organization key'
 
-    openai.api_key = "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"
+    openai.api_key = "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"
     engine_list = openai.Engine.list() # calling the engines available from the openai api 
     counter = 0
     for page in paperContent:    
@@ -43,7 +43,7 @@ def showPaperSummary(paperContent):
         )
         print(response["choices"][0]["text"])
         generated_text = response["choices"][0]["text"]
-        with open("summary.txt", "a") as file:
+        with open("summary.txt", "w") as file:
             if (generated_text == ""):
                 continue
             counter += 1
