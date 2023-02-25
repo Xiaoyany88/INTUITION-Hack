@@ -8,3 +8,30 @@ This repository is for iNTUition v9.0 Hackathon where we attempt to transform Re
 - Darren Ng Joon Kai
 - Denzyl David Peh
 - Zhang Xiaoyang
+
+### Libraries Used
+- pptx
+- Pillow
+- requests
+- BeautifulSoup
+- pdfminer
+- os
+- fitz
+- openai
+- re
+- dotenv
+- PyPDF2
+- nltk
+- io
+- bing_image_urls
+- wget
+- pathlib
+- pdfplumber
+- numpy
+
+### Possible Improvements
+- Better machine learning algorithms for processing of keywords.
+- Generate summarize text of research articles with higher accuracies
+- More variations and better arrangements of elements for visual appeal
+- Implement graphs and tables for statistics found within research articles
+- Create other types of multimodal formats such as blogs, inforgraphics and possibly even videos
