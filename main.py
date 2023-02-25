@@ -15,7 +15,6 @@ if __name__ == '__main__':
     newLink = "https" + href[3:]
     # print(newLink)
     # print(filename)
-    # file_path = "/Users/darren/PycharmProjects/INTUITION-Hack/database/" + filename
     file_path = "database/" + filename
     # print(file_path)
     response2 = requests.get(newLink)
