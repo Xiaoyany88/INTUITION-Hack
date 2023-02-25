@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 
 
 
-openai.api_key = "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"
+openai.api_key = "insert api key"
 
 # Open the file and read its contents
 with open('summary.txt', 'r') as file:
