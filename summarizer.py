@@ -2,6 +2,7 @@ import openai
 import wget
 import pathlib
 import pdfplumber
+from ppt2 import *
 import numpy as np
 import os
 
@@ -33,8 +34,7 @@ def showPaperSummary(paperContent, prs):
 
     openai.api_key = "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"
     engine_list = openai.Engine.list() # calling the engines available from the openai api 
-    counter = 0
-    for page in paperContent:    
+    for page in paperContent:
         text = page.extract_text() + tldr_tag
         response = openai.Completion.create(engine="davinci",prompt=text,temperature=0.3,
             max_tokens=140,
@@ -48,20 +48,19 @@ def showPaperSummary(paperContent, prs):
         with open("summary.txt", "w") as file:
             if (generated_text == ""):
                 continue
-            counter += 1
+            new_slide(prs, generated_text)
             file.write(generated_text + "\n")
             file.write("\n---\n\n")
-    return counter
-        
-def summarizer():
+
+def summarizer(prs):
     # paperFilePath = "Research article sample.pdf"
     configure()
     # paper_url = "https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_pdf/fe/ae/nihms-1849852.PMC9805511.pdf"
     # paperFilePath = getPaper(paper_url)
     paperFilePath = "database/nihms-1857952.PMC9797056.pdf"
     paperContent = pdfplumber.open(paperFilePath).pages
-    counter = showPaperSummary(paperContent)
-    return counter
+    showPaperSummary(paperContent, prs)
+
 
 
 
