@@ -1,5 +1,6 @@
 from pptx import Presentation
 from pptx.util import Inches, Pt
+from summarizer import *
 from font_size import *
 
 
@@ -15,7 +16,7 @@ print(title2)
 prs = Presentation()
 
 # Set the slide layout to have a modern background
-slide_layout = prs.slide_layouts[0]
+slide_layout = prs.slide_layouts[6]
 
 # Add a slide for each picture path provided
 # picture_paths is a variable that contains a list of file paths for the pictures
