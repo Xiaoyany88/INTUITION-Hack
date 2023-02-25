@@ -1,488 +1,830 @@
-An innovative digital imaging set-up allowing a low-dose approach
-to phase contrast applications in the medical ﬁeld
-A. Olivo,a)F. Arfelli, G. Cantatore, and R. Longo
-Dipartimento di Fisica, Universita `di Trieste e INFN, Sezione di Trieste, Via Valerio 2, 34100 Trieste, Italy
-R. H. Menk
-Sincrotrone Trieste ScPA, Strada Statale 14 Km 163.5, 34100 Trieste, Italy
-S. Pani, M. Prest, P. Poropat, and L. Rigon
-Dipartimento di Fisica, Universita `di Trieste e INFN, Sezione di Trieste, Via Valerio 2, 34100 Trieste, Italy
-G. Tromba
-Sincrotrone Trieste ScPA, Strada Statale 14 Km 163.5, 34100 Trieste, Italy
-E. Vallazza and E. Castelli
-Dipartimento di Fisica, Universita `di Trieste e INFN, Sezione di Trieste, Via Valerio 2, 34100 Trieste, Italy
-~Received 20 November 2000; accepted for publication 30 May 2001 !
-Recently, new imaging modalities based on the detection of weak phase perturbations effects,
-among which are phase contrast and diffraction imaging, have been developed by several research-ers. Due to their high sensitivity to weakly absorbing details, these techniques seem to be verypromising for applications in the medical ﬁeld. On the other hand, digital radiology is undergoinga wide diffusion, and its beneﬁts are presently very well understood. Up to now, however, the strongpixel size constraints associated with phase contrast pattern detection limited the possibility ofexploiting the advantages of phase contrast in digital radiology applications. In this paper, aninnovative setup capable of removing the pixel size constraints, and thus opening the way to lowdose digital phase contrast imaging, is described. Furthermore, we introduce an imaging techniquebased on the detection of radiation scattered at small angles: the information extracted from thesample is increased at no dose expense. We believe that several radiological ﬁelds, mammographybeing the ﬁrst important example, may beneﬁt from the herein described innovative imaging tech-niques. © 2001 American Association of Physicists in Medicine. @DOI: 10.1118/1.1388219 #
-Key words: phase contrast, diffraction, digital radiology, synchrotron radiation, image
-enhancement
-I. INTRODUCTION
-One of the main problems in diagnostic radiology is the low
-image contrast due to poor x-ray absorption differences. Thislimitation is particularly relevant in the ﬁeld of mammogra-phy, where low contrast masses and small size microcalciﬁ-cations have to be detected. In the ﬁrst case, relatively largeobjects having an x-ray absorption coefﬁcient very close tonormal tissue are studied; in the second case, the absorptioncoefﬁcient difference is high ~calcium versus soft tissue !, but
-the extremely small dimensions of the calciﬁed structures~hundreds of microns or less !result in very poor intensity
-differences in the x-ray beam transmitted through the detailand immediately outside it.
-1–5In some cases, these obstacles
-result in limitations in terms of sensitivity as well as speci-ﬁcity of the mammographic examinations.
-6
-A solution to this problem consists in developing new
-detectors with extremely high contrast resolution. In thisframework, very promising results have been obtained bymeans of single photon counting detector devices, like theSYRMEP/FRONTRAD ~SYnchrotron Radiation for
-MEdical Physics/FRONTier RADiology !detector
-prototype,
-7–10or other similar devices.11The ability of
-counting every single photon clearly maximizes the contrastresolution in the images, since the only noise source lays in
-the intrinsic statistic nature of x-ray emission and absorption~quantum noise !.
-12–14This approach, however, while pushing
-further down the minimum detectable contrast threshold, stillrelies only on the absorption properties of the imaged object,
-and thus to some extent it is still subject to the limitationsmentioned above.
-Acompletely different strategy is employed by phase con-
-trast imaging, which has recently been deeply investigatedby several researchers, especially because of its relevant po-tentials in the medical ﬁeld.
-15–24In the phase contrast ap-
-proach, image contrast arises from the real part of the refrac-tive index ~commonly referred to as
-din the literature, the
-refractive index being expressed as n 512d1ib!, rather than
-from its imaginary part ~b!. For most materials ~and espe-
-cially for soft tissue !, in the energy range of radiology ~be-
-low 100 keV !,dis much larger than b; consequently, the
-effects due to dare, in general, much more relevant than
-those due to b. Contrast formation is due to interference
-between the wave fronts that have been phase shifted by adetail inside the imaged sample and the unperturbed wavefronts propagating in the immediate vicinity of the detailitself. This interference effect takes place within a very nar-
-1610 1610 Med. Phys. 28 8, August 2001 0094-2405 Õ2001Õ288Õ1610Õ10Õ$18.00 © 2001 Am. Assoc. Phys. Med.row angular region ~10–100 mrad!, and inside this region an
-interference pattern can be detected. An exhaustive descrip-tion of the interference pattern formation can be found inRefs. 25–26. The aspect that we want to stress here is thepossibility of obtaining a very high image contrast also whenimaging extremely low absorbing details, since the involvedphysical process is completely different and does not rely onx-ray absorption. Ideally, completely nonabsorbing details~i.e., with exactly the same value of
-bas the background in
-which they are embedded !may also be detected by means of
-this technique, if their dvalue differs to some extent from the
-background value.
-In order to apply the technique to diagnostic radiology,
-however, a few relevant problems have to be solved. First ofall, since the interference angle is very small, it is impossibleto place the detector device immediately behind the imagedsample: the sample-to-detector distance has to be increasedin order to convert the small angular interference region intolinear dimensions compatible with the detector spatial reso-lution. On the other hand, the ﬁnite source size results inexcessive blurring effects ~which could smear the interfer-
-ence peaks !if this distance is made too large; thus, a com-
-promise between these counteracting effects has to be foundaccording to the speciﬁc imaging requirements ~imaged
-sample characteristics, detector spatial resolution, radiationsource dimensions, and so on !. An example of sample-to-
-detector distance optimization, based on Fresnel–Kirchoffdiffraction integrals evaluation, can be found in Ref. 22. Thesame reference demonstrates that, if the source size is toolarge, the phase contrast technique provides very poor imagequality. Thus, extremely high spatial coherence sources arerequired for phase contrast imaging: namely, synchrotron ra-diation sources or microfocus x-ray tubes. Chromatic coher-ence is much less critical, and, in fact, phase contrast imageshave also been obtained by means of polychromaticsources.
-27Most of the works reported in the references, how-
-ever, are concerned with synchrotron radiation experiments,since with microfocus x-ray tubes phase contrast imagingrequires extremely long exposure times ~;2h
-27!due to the
-low emitted ﬂux.
-Even when high coherence sources are used, the detection
-of secondary interference peaks requires detectors with ex-tremely high spatial resolution: due to this fact, the ﬁrstphase contrast experiments were carried out utilizing highresolution x-ray ﬁlms or high resolution CCD cameras ~see,
-for instance, Refs. 15–16 !. The low detection efﬁciency of
-these devices, however, prevented clinical applications of thetechnique, due to the high radiation dose consequently deliv-ered to the samples. More recently, low dose phase contrastimages were obtained by means of conventional ﬁlm-screensystems:
-21–22it was, in fact, observed that the convolution
-between the phase contrast patterns and the ﬁlm-screen sys-tem point spread function preserves relevant improvementsin the detected signal, especially in terms of edge enhance-ment. In this framework, effort is now directed toward adigital approach to low dose phase contrast imaging, since itwould result in combining the well-known advantages ofboth phase contrast and digital imaging. In principle, thiswould require a high efﬁciency, high spatial resolution
-~tenths of
-mm!detector device; but in most cases detection
-efﬁciency and spatial resolution are counteracting issues.Even though some other possibilities might have been inves-tigated ~based, for instance, on the optimization of the scin-
-tillator coating and of the pixel size of a CCD camera, or onthe development of appropriate ﬂat panel devices !, our expe-
-rience with the SYRMEP/FRONTRAD detector prototypeencouraged us to search for a possible application of thisdevice in the phase contrast ﬁeld. Following this strategy, arelevant dose reduction can be provided by the very highdetection efﬁciency ~.80% at 20 keV !of the device, while
-at the same time the single photon counting capability of thereadout electronics allows the detection of very small sig-nals. In order to check the feasibility of this approach, weﬁrst reduced the detector pixel size by means of a narrow,fully absorbing slit placed in front of the detector sensitivearea. Then, a detailed analysis of the basic physical prin-ciples of phase contrast image formation enabled us to de-velop an innovative setup, which gives the possibility ofremoving—at least in one dimension—the pixel size con-straints, thus achieving low dose, single photon counting,digital phase contrast images.
-Finally, it is important to underline that all the images that
-will be presented below have been obtained at relatively low~17–22 keV !photon energies. In this way, the phase contrast
-signal ~due to
-d!is superimposed to the conventional absorp-
-tion signal ~due to b!, and both contrast sources are exploited
-at the same time.
-Another possibility might consist in highly increasing the
-beam energy. This would result in a strong reduction of thedose delivered to the sample, but also in an excessive de-crease of the absorption contrast with respect to the phasecontrast signal ~in other words, only the edges of the details
-would be detected !. Our approach thus preserves all the fea-
-tures of conventional absorption imaging, while at the sametime the visibility of all details is dramatically enhanced bythe phase effects.
-II. MATERIALS AND METHODS
-A. The beamline
-The SYRMEP beamline has been described in detail in
-previous papers,28–29thus here just a few main characteris-
-tics will be given. The radiation source results from one ofthe bending magnets of the storage ring. Source dimensions~i.e., the transverse dimensions of the electron bunches when
-crossing the magnet !are equal to 1100 ~width !3140
-~height !
-mm2FWHM ~full width at half-maximum !. The
-beam is carried to the experimental room, located at approxi-mately 20 m from the source, through a high vacuum beampipe. Along the pipe a channel-cut Si ~1,1,1!crystal mono-
-chromatizes the beam with an energy resolution of about0.2% in the energy range 10–35 keV. At the entrance of the1611 Olivo et al.: An innovative digital imaging set-up 1611
-Medical Physics, Vol. 28, No. 8, August 2001experimental room, a tungsten slit system, moved by micro-
-metric precision stepper motors, allows a precise deﬁnitionof the beam cross section; the maximum available cross sec-tion is 100 ~width !34~height, FWHM !mm
-2. A larger
-monocromator crystal is currently under development: thisdevice will provide us in the near future a wider beam crosssection (150 34m m
-2!. The experimental room is equipped
-with a large area ionization chamber, which allows beammonitoring and thus delivered dose evaluation, a samplemovement stage, and the detector prototype, which is de-scribed in the next section.
-B. The detector
-The SYRMEP/FRONTRAD detector prototype is a sili-
-con microstrip detector used in edge-on geometry, i.e., withradiation impinging on the side rather than on the surface ofthe wafer ~see diagram 1 !. The dimensions of the wafer are
-equal to 51.2 ~width !30.3~height !310~depth !mm3.O n
-one of the large surfaces of the device 256 parallel strips areimplanted, and thus the device is subdivided into 256 inde-pendent cells, each one having dimensions equal to 0.2~width !30.3~height !310~depth !mm
-3. Therefore, in the
-edge-on geometry, the incoming photons impinge on an ar-ray of 256 pixels, the dimensions of which are determined bythe strip pitch ~200
-mm!in the horizontal direction and by
-the wafer thickness ~300mm!in the vertical direction. Since
-the depth of the single detector cell is 1 cm, photons in theconsidered energy range ~15–35 keV !are nearly completely
-absorbed within the detector volume. Thus, an absorptionefﬁciency practically of 100% is obtained. On the otherhand, a thin undepleted entrance window is strictly necessaryin order to preserve the detector noise performances; thedepth of this ‘‘dead volume’’is of the order of 150–200
-mm.
-As a result, the overall detection efﬁciency of the device is ofthe order of 80% at mammographic energies.
-The electronic chain reading out the signal, completely
-realized in VLSI ~Very Large Scale Integration !technology,
-operates in a single photon counting mode. After a charge-sensitive preampliﬁer and several amplifying and shapingstages, a variable threshold discriminator and a scaler enableus to completely cut off the noise and count every singlesignal higher than the threshold for photon energies higherthan 15 keV. Thus, only quantum noise is present in theacquired images, and image contrast is consequently maxi-mized.
-A more detailed description of the detector prototype and
-readout electronics can be found in Refs. 7–10.C. The imaging setup
-As described in Sec. II, a highly collimated, 100 34m m2
-laminar monochromatic beam is available in the experimen-
-tal room: this beam is usually reduced down to ;512
-30.3 mm2by means of the tungsten slits and kept station-
-ary during image acquisition. The detector prototype dis-cussed in the previous section is mounted on a two-axis mi-crometric precision positioning stage. In this way, thedetector active surface can be carefully matched to the lami-nar beam cross section. Once this alignment is obtained, thedetector is kept stationary with respect to the beam and thetwo-dimensional images are acquired by vertically scanningthe sample through the beam by means of a micrometricprecision scanning stage. Further details on the SYRMEP/FRONTRAD imaging acquisition technique can be found inRefs. 28–30. In order to perform phase contrast imaging it isnot possible to place the sample in contact with the detector,but it is rather necessary to optimize the sample-to-detectordistance. Following previous calculations
-22and the simula-
-tions described in the next section, the sample scanning stagehas been placed at a distance of approximately 1.8 m fromthe detector. Since the source-to-detector distance is slightlylower than 25 m, we obtain in this way a source-to-sampledistance of approximately 23 m. This distance results in ahigh spatial coherence in the vertical direction ~correspond-
-ing to the source dimension equal to 140
-mmF W H M !and in
-a lower coherence in the horizontal direction, where thesource size is larger. In this paper we basically deal withoptimizing the phase contrast image quality in the verticaldirection, i.e., the direction along which the sample isscanned through the beam.
-Nevertheless, as will be shown in the next section, very
-high overall image quality has been achieved with the de-scribed technique.
-D. The simulations
-Before the experiment was carried out, most of the ex-
-pected results have been simulated by means of routines spe-ciﬁcally developed for the purposes of the present work. Inthe next section nearly all the experimental results will bepresented together with the simulated ones, and, as it will beseen, in all such cases a good agreement between simulationand experiment is obtained.
-A precise evaluation of a phase contrast pattern can be
-made by means of Fresnel–Kirchoff integrals.
-25–26In this
-way, the ideal image that would be obtained by illuminatingthe sample with a point source and by means of an ‘‘inﬁnite’’spatial resolution detector can be evaluated. Then, the use ofa ﬁnite size source and of a ﬁnite resolution detector has tobe taken into account: this can be done by means of convo-lution integrals. This approach has already been described inRef. 22.
-Asimpler—but more approximated—strategy is based on
-the so-called paraxial approximation:
-16,27this technique pro-
-vides the possibility of evaluating the diffraction angle of aphoton outcoming from the object by means of very simple1612 Olivo et al.: An innovative digital imaging set-up 1612
-Medical Physics, Vol. 28, No. 8, August 2001equations ~basically, the deﬂection angle is proportional to
-the gradient of d; see the quoted references for full formu-
-las!.
-In this way, the path of each photon emitted by the source
-and crossing the sample can be followed, similarly to what isdone in ray tracing. This simulation receives in input thedimensions of the region from which photons are emitted~the source size !and the area they must reach after having
-crossed the sample in order to be detected ~the detector pixel
-size!; thus, it is not required any convolution on the output
-signal.
-Results obtained with this approximated technique have
-been compared to the ones provided by the more rigorousFresnel–Kirchoff approach, and a good agreement wasfound.
-31This is due to the fact that when Fresnel–Kirchoff
-patterns are convolved with a source size and a detector pixelthat are not very small, all the ﬁne features of the pattern,which constitute the main difference between the two ap-proaches, are lost.Thus, in most practical cases the two tech-niques give nearly the same results. This aspect will be madeclearer when the ﬁrst simulated patterns will be presented, atthe beginning of the following section. As a last remark, itshould be noted that by introducing the refractive index as acomplex number ( n512
-d1ib) in the simulations, both ab-
-sorption and phase contrast effects are taken into account inthe patterns.
-III. RESULTS AND DISCUSSION
-A. Pixel size constraints
-By means of the simulations described above, we ﬁrst
-evaluated the effect of the detector pixel size on the phasecontrast signal: the result is shown in Fig. 1. Figure 1 ~a!
-shows the ‘‘pure’’interference pattern that would be obtainedby illuminating a 100
-mm diam nylon wire with a monochro-
-matic ~17 keV !point source. Figures 1 ~b!,1~c!,1~d!, and
-1~e!show the same pattern acquired by means of a detector
-pixel having dimensions equal to 25, 50, 100, and 300 mm,
-respectively. The source-to-sample distance was 23 m andthe sample-to-detector distance was 1.8 m, as occurs in theexperimental conditions. As it can be seen, the convolutionwith the pixel size smears out the phase contrast pattern, andthe larger the pixel the smaller the acquired signal. All thepatterns presented in Fig. 1 have been obtained by means ofthe Fresnel–Kirchoff integral technique described above.Nevertheless, the paraxial approximation would have givenalmost the same results for Figs. 1 ~c!–1~e!and would have
-reproduced to a very good approximation also Fig. 1 ~b!.
-Only the pattern shown in Fig. 1 ~a!would not be obtainable
-by means of the paraxial approximation; however, this kindof ﬁne pattern cannot be acquired with our experimentalsetup.
-As it can be seen from Fig. 1 ~e!, very poor phase contrast
-images would be collected with the SYRMEP/FRONTRADdetector ~pixel height 5300
-mm!without applying the tech-
-niques described in the next sections. The signal in Fig. 1 ~e!
-is of the order of 1%, and thus it would not contribute sig-niﬁcantly to the detection of details within a sample. Somephase contrast images of nylon wires have been acquired
-with the 300
-mm detector, and the detected signal was of the
-order of 1%, in agreement with the predictions of the simu-lation.
-B. Pixel size reduction
-In order to increase the phase contrast signal, it is thus
-necessary to reduce the pixel dimensions. The ﬁrst attempt atpixel size reduction consisted in placing a copper mask infront of the detector device. The mask was obtained by carv-ing a 100
-mm high, 5 cm long slit into a 0.7 mm thick copper
-foil. The thickness of the copper foil is large enough to guar-antee full absorption of photons in the considered energyrange. Thus, when the slit is perfectly aligned with the centerof the active surface of the detector device, the pixel size iseffectively reduced from 300 ~height !3200~width !
-mm2
-down to 100 ~height !3200~width !mm2. This ﬁne align-
-ment was obtained by mounting the copper mask on a mi-crometric precision movement stage. The beam height was,of course, reduced accordingly, in order to avoid useless dosedelivery to the samples.
-With this set-up, i.e., with a pixel size equal to 100
-mmi n
-the scanning direction, a signal comparable to the one shown
-FIG. 1. Inﬂuence of the pixel dimensions on the phase contrast signal ~see
-the text !. Above: simulated interference pattern obtainable with a point
-source and a detector with ‘‘inﬁnite’’spatial resolution. Below: from left toright and top to bottom, the same pattern as it would appear if acquired with
-a 25, 50, 100, and 300
-mm pixel, respectively. The signal is smeared out as
-the pixel size is increased. For all graphs, the relative intensity is given as afunction of the spatial displacement in microns.1613 Olivo
-et al.: An innovative digital imaging set-up 1613
-Medical Physics, Vol. 28, No. 8, August 2001in Fig. 1 ~d!is expected. This signal is of the order of 10%: a
-relevant gain should thus be achieved with respect to con-ventional absorption imaging, which would give for the sameobject (a;100
-mm thick nylon wire !a signal much lower
-than 1% in the energy range of mammography.
-A demonstration of this fact is given in Fig. 2, which
-shows images of three nylon wires ~diameters equal to 50,
-160, and 500 mm!obtained at 20 keV with this setup: all
-wires are perfectly detected. In this case, a 10 mm scanning
-step was applied. Figure 3 shows the experimentally mea-sured signal ~dots with error bars representing the quantum
-noise !together with the simulated one ~solid line !for all
-three wires.
-In these plots, the relative intensity ~i.e., intensity normal-
-ized to the background !is reported as a function of distance
-along the scanning direction; and the signal, i.e., the contrast,can be directly read out on the vertical axis. This signal~measured from peak to peak !is equal to about 4%, 8%, and
-11.5% for the 50, 160, and 500
-mm wire, respectively. Note
-that the same wires at the same energy would result in asignal of 0.1%, 0.3%, and 1% ~respectively !in conventional
-absorption imaging: thus, a contrast increase of more thanone order of magnitude is obtained in all cases by means ofthe proposed technique.
-It should be noted that in this framework the contrast is
-more signiﬁcant than the SNR ~signal to noise ratio !. In fact,
-since the detector operates in the single photon countingmode, the uncertainty on the number of counts is equal to thesquare root of the number of counts itself ~in all images of
-Fig. 2, the number of counts per pixel in the backgroundregion was approximately 10 000, and thus in Fig. 3 the error
-bars are of the order of 1% for all wires !.
-This means that, given the contrast value, the SNR can be
-readily evaluated for any photon ﬂuence. Generally speak-ing, the relevant aspect is the fact that here we are dealingwith a physical process that provides increased detail con-trast, which is completely different from enhancing the con-trast by means of post-processing procedures ~unsharp mask-
-ing, etc. !. A low contrast results in a low SNR, unless the
-delivered dose is dramatically increased, and below somethresholds ~Rose criterion, for instance !no post-processing
-procedure can restore the detail visibility. The possibility ofobtaining higher detail contrast in the original images meanshigher SNR at the same dose or the same SNR at a lowerdose, despite any image processing. On the other hand, post-processing procedures might be applied to phase contrastimages to further enhance the detail visibility.
-C. The development of a new setup capable
-of removing the pixel size constraints
-Even though the image quality that can be seen in Fig. 2
-is impressive, this result just demonstrates that phase contrastimaging is feasible if the sample-to-detector distance is op-
-FIG. 2. Phase contrast images of nylon wires of different diameters obtained
-by reducing the pixel size from 300 to 100 mm by means of a slit ~see the
-text!.
-FIG. 3. Experimental data ~dots!superimposed on simulated data ~solid line !
-relative to the wires shown in Fig. 2. For all graphs, the relative intensity isgiven as a function of the displacement in microns. Since the detector op-erates in a single photon counting mode, the only noise source is due toquantum ~Poisson !ﬂuctuations; error bars are thus equal to the square root
-of the number of counts.1614 Olivo
-et al.: An innovative digital imaging set-up 1614
-Medical Physics, Vol. 28, No. 8, August 2001timized, if the source is sufﬁciently coherent and if the de-
-tector pixel is made small enough. Based on these prelimi-nary results, an innovative setup, capable of eliminating thepixel size constraints, has been devised.
-First of all, we discuss in deeper detail the setup described
-in the previous section. It should be noted that, in this con-ﬁguration, the photons impinging immediately outside theactive surface of the pixel when the sample is not present~see the arrow labeled 1 in Fig. 4 !, although responsible of a
-slight dose increase with respect to absorption imaging,where sample and detector can be perfectly matched, are ofprimary importance.When the sample is scanned through thebeam, a fraction of those photons is deﬂected within theactive surface of the pixel: this gives rise to the positivepeaks in the phase contrast signal. Photons that impinge im-mediately within the active surface ~the arrow labeled 2,
-which refers to a portion of the beam height approximatelycomparable to the one falling outside the active surface !have
-similar importance: when the object passes through thebeam, a part of them will be deﬂected outside the activesurface. In this way, the negative peaks in the phase contrastsignal are originated. The same situation occurs on the otherside of the pixel active area. This somehow implies that pho-tons impinging on the center of the detector active surfaceare useless: the deviation angle of the photons is, in general,sosmall ~;10
-mrad,asquotedabove !thatthosephotonswill
-impinge on the detector active surface also after their inter-action with the sample. That is to say, those photons justincrease the background without a signiﬁcant contribution tothe signal.
-This discussion is summarized in Fig. 5, where the dashed
-line represents the trajectory of the photon without thesample, while the solid line shows the photon deﬂection ~not
-to scale !due to the passage of the object. On the right-hand
-side, the resulting ~simulated !signal is shown. Three crucial
-sample positions are shown, and connected by arrows to thecorresponding points in the signal; only one-half of thesample scan is schematized, since the situation is symmetricfor the remaining part of the scan.
-This analysis led us to the development of the second step
-of the new setup, shown in Fig. 6 ~a!: in this conﬁguration
-photons in the center of the beam have been eliminated. Inthis case, the original beam is split in two narrow beams bya collimator: each narrow beam impinges on one of the de-
-tector active area edges. The collimator is placed upstreamthe sample, in order to avoid unnecessary dose delivery.Comparing the simulated signal shown on the right-handside of Fig. 6 ~a!with the one shown in Fig. 5, it is apparent
-that a relevant gain is acquired by means of this slightchange in the set-up. Note that here we are referring to therelative intensity, i.e., the contrast: the discussion is thus in-dependent from dose and/or ﬂux considerations, as discussedin the previous section.
-But, apart from the signal increase, it is extremely impor-
-tant to notice that in this conﬁguration the detector pixel sizehas lost any inﬂuence on the intensity of the detected signal:in other words, the extremely stringent ~see Fig. 1 !pixel size
-constraints have been eliminated. If the detector pixel nowbecomes larger, one has to adjust the relative distance be-tween the two beams in such a fashion that they still impingeon the edges of the pixel active area, without changing theheight of the beams themselves. In this way, the only changein the signal would be an expansion of the ﬂat region in themiddle of the signal. The intensity and the shape of thepeaks, however, remain unchanged. Notice that at this point
-FIG. 4. Schematic of the setup used to acquire the images shown in Fig. 2.
-FIG. 5. Schematic of the image formation principle for the images shown in
-Fig. 2 ~see the text !, and simulated signal ~right!f o ra5 0 mm nylon wire
-placed at 1.8 m from the detector and illuminated by 20 keV radiation.
-FIG. 6. Experimental setup ~left!and simulated signal for a 50 mm nylon
-wire imaged at 20 keV with a sample-to-detector distance of 1.8 m ~right;
-the relative intensity is plotted as a function of the displacement in microns !
-for two different imaging techniques. The shown setups provide a relevantcontrast increase with respect to the one of Figs. 4–5, and they allow thepossibility of removing the pixel size constraints ~see the text !.1615 Olivo
-et al.: An innovative digital imaging set-up 1615
-Medical Physics, Vol. 28, No. 8, August 2001the copper slit is completely unessential, and could thus be
-removed provided that the distance between the center of thetwo beams is increased from 100 to 300
-mm.
-The third and last step of the setup development arises
-from the fact that in most cases, while one of the narrowbeams is impinging on a detail, the other one just increasesthe background, and vice versa . It follows then that even
-higher signals can be achieved by eliminating one of the twobeams, and utilizing a single narrow beam impinging on oneof the pixel edges @see Fig. 6 ~b!#. In this case the symmetry
-of the signal is clearly broken, but two intense peaks, onepositive and one negative, still reveal the presence of a detailwithin the imaged sample. As it can be seen from the right-hand side of Fig. 6 ~b!, in this way a further gain in the signal
-is achieved, and the fact that the detector pixel dimension hasno inﬂuence on the acquired signal is even more evident.
-Another interesting aspect of this last setup lies in the fact
-that the narrower the incoming beam, the more intense theacquired signal. In fact, by narrowing the beam, the remain-ing photons are more easily deviated inside/outside the de-tector active surface when the sample is scanned through thebeam. Thus, their contribution to the signal is much morerelevant. Of course the beam intensity is increased accord-ingly, in order to preserve the number of detected photonsper acquisition step avoiding an increase of the quantumnoise. In a scanning acquisition modality, this results in adose increase with respect to absorption imaging propor-tional to the fraction of the beam impinging outside the de-tector active surface ~this aspect will be discussed in more
-detail below, when images of the Ackermann phantom willbe presented !.
-Figure 7 shows an experimental demonstration of the sig-
-nal increase due to beam height reduction. The same object~a 160
-mm diameter nylon wire !has been imaged at 20 keV
-with a scanning step of 10 mm utilizing a single narrowbeam, illuminating 80% @Fig. 7 ~a!#, 60% @Fig. 7 ~b!#, and
-only 15% @Fig. 7 ~c!#of the pixel. In all cases, 20 mmo ft h e
-beam thickness fell outside the active surface of the detector~i.e., on the copper mask, since for practical reasons we al-
-ways left the mask in its position after the careful alignment !.
-The geometrical conﬁguration is thus very similar to the oneshown in Fig. 6 ~b!, the only difference being the beam height
-@which in this case is equal to 100, 80, and 35
-mm for Figs.
-7~a!,7~b!, and 7 ~c!, respectively #. From these images the
-image formation mechanism is immediately apparent: onenarrow white line ~the positive peak !and a black one ~the
-negative peak !underline the presence of the wire, and the
-contrast increases as the beam is made narrower.
-This is more evident in Fig. 8, where the experimental
-points ~dots with error bars !are superimposed on the simu-
-lated signal ~solid line !. The relative intensity is plotted as a
-function of the spatial displacement in the scanning direc-tion, and the signal can be directly read out on the verticalaxis. From top to bottom, plots correspond to Figs. 7 ~a!,7~b!,
-and 7 ~c!, and the acquired signal is of the order of 9%, 11%,
-FIG.7 .I m a g e so fa1 6 0 mm nylon wire obtained at 20 keV with the experi-
-mental setup shown in Fig. 6 ~b!. By reducing the beam height from 100 mm
-~a!to 80 and 35 mm@~b!and~c!, respectively #, the contrast increases ~see
-the text !.
-FIG. 8. Experimental data ~dots!superimposed on simulated data ~solid line !
-relative to the wires shown in Fig. 7. For all graphs, the relative intensity isgiven as a function of the displacement in microns. Error bars are equal tothe square root of the number of counts ~also see Fig. 3 !.1616 Olivo
-et al.: An innovative digital imaging set-up 1616
-Medical Physics, Vol. 28, No. 8, August 2001and 40%, respectively. It should be noted once again that
-with pure absorption effects, a 160 mm nylon wire at 20 keV
-would result in a ;0.3% signal ~practically undetectable: for
-this reason the absorption image is not shown here !. This
-means that with this setup we have obtained a gain in theintensity of the signal ~i.e., in the contrast !higher than two
-orders of magnitude.
-It is important to notice that the portion of the beam that
-impinges within the detector active surface is responsible forall the absorption signal as well as for the negative peaks inthe phase contrast signal, while the part of the beam fallingoutside the detector provides the positive peaks in the phasecontrast signal but does not contribute to the absorption sig-nal. Furthermore, as mentioned above, this part of the beamresults also in a dose increase. Nevertheless, exploiting alsothe positive and not only the negative phase contrast peakspractically means doubling the signal in all those caseswhere absorption is negligible with respect to phase contrast,as clearly visible in Fig. 8.
-D. Application of the technique to a standard
-mammographic phantom
-The same technique was then applied to a conventional
-mammographic phantom ~Ackermann Phantom, RMI 160,
-Gammex, Middleton, WI !. Figure 9 shows three details ex-
-tracted from the phantom images: simulated lymphonodes~top!, simulated tissue samples ~middle !, and simulated ﬁbers
-~bottom, within the ring !. A complete description of the
-phantom can be found in Ref. 32. Figure 9 ~a!shows the
-absorption image of the phantom ~sample-to-detector dis-
-tance ;0!and Fig. 9 ~b!the phase contrast image ~sample-
-to-detector distance ;1.8 m !obtained with the setup of Fig.
-6~b!~but different beam height !. The improvement in imagequality obtainable with the proposed setup is apparent. It is
-important to notice that the ‘‘noisy’’appearance of Fig. 9 ~b!
-is not due to the proposed technique, but to the inner struc-ture of the phantom, which is granular. In other words, theproposed technique depicts correctly the structure in whichthe details are embedded, and thus this ‘‘granularity’’shouldnot be interpreted as image noise. This effect was alreadyobserved and discussed in Ref. 33.
-As already pointed out in a previous work,
-30the image
-quality visible in Fig. 9 ~a!is higher than that one provided
-by conventional mammographic equipment ~images of the
-same phantom obtained on a conventional equipment can befound in the same reference, as well as in Refs. 10,33 !.Thus,
-Fig. 9 ~b!demonstrates the further improvements in image
-quality that can be achieved by means of the phase contrasttechnique and the proposed setup.
-Figure 9 ~a!and Fig. 9 ~b!were obtained at 22 keV in the
-same conditions, except for the sample-to-detector distanceand beam intensity. In particular, the number of detected
-photons per detector pixel per acquisition step ~i.e., the num-
-ber of counts per image pixel !was held constant at about
-10 000. For Fig. 9 ~b!~phase contrast !, the beam height was
-equal to 100
-mm, half impinging on the detector active sur-
-face and half immediately outside it. For Fig. 9 ~a!~absorp-
-tion!, the beam height was also equal to 100 mm, but per-
-fectly matching the detector active surface. For the phasecontrast image, only 50
-mm of the beam were impinging on
-the detector. Thus, in order to preserve the same overall ac-quisition time, the beam was made two times more intense~by removing an appropriate absorber !when the phase con-
-trast image was acquired. In this way, by scanning thesamples through the beam with exactly the same speed, thesame number of photons per detector pixel per unit time isdetected. It is thus clear that, when the phase contrast imageis acquired, a dose increase of a factor 2 is necessary withrespect to the absorption image. In fact, in both cases thesample is scanned through a 100
-mm high beam with the
-same speed, but the beam intensity is increased by a factor 2for the phase contrast image. However, a few things shouldbe noticed at this point.
-~1!In Ref. 30, it was demonstrated that absorption imag-
-ing with synchrotron radiation and the SYRMEP/FRONTRAD detector device can be performed while deliv-ering to the sample a Mean Glandular Dose ~MGD !of about
-0.3 mGy, thus reduced by a factor 4–5 with respect to con-ventional mammography: this reduction is due to the mono-chromaticity of the synchrotron beam and to the high efﬁ-ciency of the detector device. Thus, phase contrast imagingwith the proposed setup would be feasible at a dose levelreduced by at least a factor of 2 with respect to conventionalmammographic equipments.
-~2!The dose is increased by a factor of 2 with respect to
-the absorption image because for practical reasons 50
-mmo f
-the beam were left outside the detector active surface. Onecan expect, however, that it would be sufﬁcient to leave asmaller portion of the beam outside the active surface with-out compromising image quality, thus reducing the delivered
-FIG. 9. Images of details from a conventional mammographic test object. ~a!
-is the absorption image and ~b!the phase contrast image obtained with the
-setup shown in Fig. 6 ~b!: the improvement in image quality obtained with
-this setup is apparent.1617 Olivo et al.: An innovative digital imaging set-up 1617
-Medical Physics, Vol. 28, No. 8, August 2001dose. Investigations are on the way to prove this fact on a
-wider range of samples.
-~3!As indicated by the results shown in Fig. 7 and 8, a
-further narrowing of the beam would result in higher imagecontrast. Higher contrast means a higher signal to noise ratio~SNR!at the same dose, or, alternatively, the same SNR at a
-lower dose. This aspect is also currently under study on awide range of samples; in this ﬁrst study the beam was set to100
-mm to facilitate the comparison between the two images.
-Figure 9 already proves the fact that high gains in image
-quality can be achieved when typical mammographic objectsare imaged, at dose levels lower or comparable to conven-tional mammographic ones.
-E. A comparison with diffraction imaging results
-It should be noted that the results obtained by means of
-the herein described single narrow beam setup have a strongsimilitude with another approach to the detection of phaseeffects, called diffraction ~or diffraction enhanced !
-imaging
-20,33~compare, for instance, the images of Figs. 7
-and 9 ~b!with diffraction images in Refs. 20 and 33 #. In this
-approach, an analyzer crystal is placed between sample anddetector, and the narrow reﬂectivity curve of the crystal isused to discriminate diffracted from undiffracted photons. Inthe setup proposed here, by narrowing the beam and shiftingit with respect to the center of the pixel, something verysimilar is realized: one can, in fact, imagine a ‘‘box func-tion’’ that discriminates the photons that are detected fromthe ones that are not detected ~since they do not impinge on
-the active surface of the detector !according to the diffraction
-angle they have when they come out of the sample. Therelative shift between narrow beam and pixel center deter-mines the position of this ‘‘box function’’ along the angleaxis, while the sample-to-detector distance and the pixelheight determine its width ~the higher the sample-to-detector
-distance and the smaller the pixel, the narrower the box func-tion!.The relevant aspect here lays in the fact that in our case
-the width of this ‘‘box function,’’ to some extent equivalentto the ‘‘rocking curve’’ in diffraction imaging, can be easilytuned by changing the pixel dimensions or, even more easily,the sample-to-detector distance.
-F. Scatter imaging
-The ﬁnal step of the herein described feasibility study
-consisted in shifting the narrow beam completely out of thedetector active surface by very small amounts. In this way,scatter imaging becomes feasible. The setup is very similarto the one shown in Fig. 6 ~b!, with the narrow beam shifted
-upwards by approximately 15–20
-mm. It is important to no-
-tice that, since the sample-to-detector distance is equal to 1.8m, in this way extremely small scattering angles ~a few
-tenths of microradians !are taken into account. Thus, ex-
-tremely small angle scatter images are acquired in this way.
-Considering the fact that we are using monochromatic
-radiation, and that only elastic forward scattering is takeninto account, the large dimensions of the pixel are an advan-tage rather than a disadvantage in this case: by increasing the
-pixel vertical dimension, one collects more scattered pho-tons, thus increasing the acquired signal.
-In Fig. 10, simulated plots show the behavior of the signal
-as a function of the pixel size; the simulated sample was a100
-mm nylon wire, radiation energy was equal to 20 keV.
-As it can be seen, the scattering peak ~that will result in a
-strong dark halo in the image when the beam impinges on adetail !increases as the pixel size is made larger, until at a
-certain point nearly all the scattered photons are collected,and the signal is consequently maximized. Since here we aredealing with photons that deviated by a very small amountfrom their original propagation direction, the shape of thedetails is somehow preserved in the images, even thoughonly scattered—and not direct—radiation is detected. Thisfact is demonstrated by Fig. 11, which shows an image ofone of the details of the Ackermann phantom ~the simulated
-lymphonodes !obtained only with scattered radiation. As it
-can be seen, since now scattered photons are added to thebackground, instead of subtracted as it occurs in conven-tional absorption imaging, the contrast of the details is re-versed with respect to Fig. 9 ~a!.
-The last important remark regards the fact that the detec-
-tion of scattered photons can be achieved at no dose expenseby simply adding a further detector layer above ~or below, or
-both above and below !the layer that is acquiring the con-
-ventional absorption ~or phase contrast, according to the
-pixel dimensions !image. Investigations are thus now di-
-rected toward the optimization of such a multilayer detector
-FIG. 10. Inﬂuence of the pixel size on extremely small angle scatter imag-
-ing. As the pixel size is enlarged, the signal increases until nearly all thescattered photons are collected. The simulated scattered intensity ~in arbi-
-trary units !is given as a function of the displacement in microns.
-FIG. 11. Image of a detail of the mammographic test object obtained making
-use only of scattered radiation. The contrast is reversed with respect toabsorption imaging @Fig. 9 ~a!#.1618 Olivo
-et al.: An innovative digital imaging set-up 1618
-Medical Physics, Vol. 28, No. 8, August 2001device: a ﬁrst three-layer prototype has already been built
-and successfully tested by our collaboration.13,34
-IV. CONCLUSIONS
-Aresearch and development study on novel techniques in
-the ﬁeld of medical imaging carried out by the SYRMEP/FRONTRAD collaboration, which involves the use of syn-chrotron radiation and a novel silicon pixel detector proto-type, has been described. The phase contrast imagingtechnique has been discussed, and its possible implementa-tion in our experimental setup has been described in detail.
-In particular, innovative setups based on narrow beams
-shifted with respect to the center of the detector active sur-face have been studied, and it has been shown that theyallow the possibility of removing the pixel size constraints,thus providing low dose, high quality digital phase contrastimages of several samples, also with a relatively large ~hun-
-dreds of microns !pixel size. Furthermore, the possibility of
-extremely small angle scatter imaging, and its possible ap-plication at no dose expense to diagnostic radiology withsynchrotron radiation, has been brieﬂy discussed. Effort isnow directed toward the possibility of exploiting all thesetechniques simultaneously by means of an optimizedmultilayer detector, thus maximizing the amount of informa-tion extracted from the sample in a single acquisition withoutincreasing the delivered dose.
-a!Corresponding author ~olivo@trieste.infn.it !
-1Mammography - A User’s Guide , NCRP Report 85, 1986.
-2H. E. Johns and J. R. Cunningham, The Physics of Radiology , 4th ed.
-~Thomas, Springﬁeld, IL, 1983 !.
-3H. E. Johns and M. J. Yaffe, ‘‘X-ray characterization of normal and
-neoplastic breast tissues,’’ Phys. Med. Biol. 32, 675–695 ~1987!.
-4X. Zhou and R. Gordon, ‘‘Detection of early breast cancer: an overview
-and future prospects,’’ Crit. Rev. Biomed. Eng. 17, 203–255 ~1989!.
-5L. W. Basset, ‘‘Mammographic analysis of calciﬁcations,’’ Radiol. Clin.
-North Am. 30, 93–105 ~1992!.
-6M. Sabel and H. Aichinger, ‘‘Recent developments in breast imaging,’’
-Phys. Med. Biol. 41, 315–368 ~1996!.
-7F. Arfelli et al., ‘‘SYRMEP ~SYnchrotron Radiation for MEdical Phys-
-ics!. Performance of the digital detector system,’’Phys. Medica IX, 229–
-233~1993!.
-8F.Arfelli et al., ‘‘Silicon x-ray detectors for synchrotron radiation digital
-radiology,’’ Nucl. Instrum. Methods Phys. Res. A 353, 366–370 ~1994!.
-9F. Arfelli et al., ‘‘An edge-on silicon strip detector for x-ray imaging,’’
-IEEE Trans. Nucl. Sci. 44, 874–880 ~1997!.
-10F. Arfelli et al., ‘‘A linear array silicon pixel detector: images of a mam-
-mographic test object and evaluation of the delivered doses,’’Phys. Med.Biol.42, 1565–1573 ~1997!.
-11E. Beuville et al., ‘‘An application speciﬁc integrated circuit and dataacquisition system for digital X-ray imaging,’’ Nucl. Instrum. Methods
-Phys. Res. A 406, 337–342 ~1998!.
-12F. Arfelli et al., ‘‘Silicon detectors for digital radiography,’’ Nucl. In-
-strum. Methods Phys. Res. A 367,4 8– 5 3 ~1995!.
-13F.Arfelli et al., ‘‘Amulti-layer silicon microstrip detector for single pho-
-ton counting digital mammography,’’ Informacije MIDEM 29,2 6 – 3 1
-~1999!.
-14F.Arfelli et al., ‘‘Improvements in the ﬁeld of radiological imaging at the
-SYRMEP beamline,’’ SPIE Vol. 3770, 1999.
-15A. Snigirev, I. Snigireva, V. Kohn, S. Kuznetsov, and I. Scelokov, ‘‘Onthe possibilities of X-ray phase contrast microimaging by coherent high-energy synchrotron radiation,’’Rev. Sci. Instrum. 66, 5486–5492 ~1995!.
-16T. J. Davis, D. Gao, T. E. Gureyev, A. W. Stevenson, and S. W. Wilkins,
-‘‘Phase-contrast imaging of weakly absorbing materials using hardX-rays,’’ Nature ~London !373, 595–598 ~1995!.
-17P. Cloetens, R. Barrett, J. Baruchel, J. P. Guigay, and M. Schlenker,
-‘‘Phase objects in synchrotron radiation hard X-ray imaging,’’J. Phys. D29, 133–146 ~1996!.
-18T. Takeda, A. Momose, Y. Itai, J. Wu, and K. Hirano, ‘‘Phase contrast
-imaging with synchrotron radiation X-rays for detecting cancer lesions,’’Acad. Radiol. 2, 799–803 ~1995!.
-19V. S. Gerasimov et al., ‘‘Search for biological objects by refraction radi-
-ography using synchrotron radiation of VEPP-3 storage ring,’’ Nucl. In-strum. Methods Phys. Res. A 405, 525–531 ~1998!.
-20D. Chapman et al., ‘‘Diffraction enhanced X-ray imaging,’’ Phys. Med.
-Biol.42, 2015–2025 ~1997!.
-21M. DiMichiel et al., ‘‘Phase contrast imaging in the ﬁeld of mammogra-
-phy,’’ in Medical Applications of Synchrotron Radiation , edited by M.
-Ando and C. Uyama ~Springer-Verlag Tokyo, 1998 !, pp. 78–82.
-22F. Arfelli et al., ‘‘Low-dose phase contrast X-ray medical imaging,’’
-Phys. Med. Biol. 43, 2845–2852 ~1998!.
-23E. A. Beliaevskaya et al., ‘‘X-ray imaging of a synthetic mammography
-structure,’’ Phys. Medica XIV, 19–23 ~1988!.
-24V. N. Ingal, E.A. Beliaevskaya,A. P. Brianskaya, and R. D. Merkurieva,
-‘‘Phase mammography—a new technique for breast investigation,’’Phys.Med. Biol. 43, 2555–2567 ~1988!.
-25M. Born and E. Wolf, Principles of Optics ~Pergamon, Oxford, 1975 !.
-26J. Cowley, Diffraction Physics ~North Holland, Amsterdam, 1975 !.
-27S. W. Wilkins, T. E. Gurejev, D. Gao, A. Pogany, and A. W. Stevenson,
-‘‘Phase contrast imaging using polychromatic hard X-rays,’’Nature ~Lon-
-don!384, 335–338 ~1996!.
-28F. Arfelli et al., ‘‘Digital mammography with synchrotron radiation,’’
-Rev. Sci. Instrum. 66, 1325–1328 ~1995!.
-29F. Arfelli et al., ‘‘The mammography project at Elettra,’’ Phys. Medica
-XIII, 7–12 ~1997!.
-30F. Arfelli et al., ‘‘Mammography of a phantom and breast tissue with
-synchrotron radiation and a linear-array silicon detector,’’Radiology 208,
-709–715 ~1998!.
-31A. Olivo, ‘‘Un metodo innovativo per produrre radiograﬁe digitali in
-contrasto di fase con luce di sincrotrone,’’ Ph.D. dissertation, Universityof Trieste, 1999, unpublished.
-32J. Law, ‘‘Anew phantom for mammography,’’Br. J. Radiol. 64, 116–120
-~1991!.
-33F. Arfelli et al., ‘‘Mammography with synchrotron radiation: phase-
-detection techniques,’’ Radiology 215, 286–293 ~2000!.
-34F. Arfelli et al., ‘‘A multilayer edge-on silicon microstrip single photon
-counting detector for digital mammography,’’Nucl. Phys. B 78,592–597
-~1999!.1619 Olivo et al.: An innovative digital imaging set-up 1619
-Medical Physics, Vol. 28, No. 8, August 2001
+“We were always doing something outside. … I had a wonderful, 
+wonderful life”: U.S. Indigenous peoples’ subsistence, physical 
+activity, and the natural world
+Catherine E. McKinley
+Tulane University School of Social Work, United States
+Abstract
+Obesity tends to be higher, whereas physical activity (PA) tends to be lower for U.S. Indigenous 
+peoples, which drives chronic health problems and mortality. Historical oppression and nutritional 
+colonialism have disrupted Indigenous peoples’ subsistence and concomitant PA. The purpose 
+of this research is to use the framework of historical oppression, resilience, and transcendence 
+(FHORT) with 31 participants in a critical ethnography identifying past and present forms of 
+PA. By examining universal themes across two tribal contexts—a Southeast reservation tribal 
+context and an urban Northwestern context—important knowledge about promising forms of PA 
+can inform culturally relevant and effective interventions to promote health and prevent obesity 
+and chronic health problems. Reconstructive thematic qualitative analysis resulted in the following 
+themes: (a) Family-Centered Physical Activity: “The Kids Would … Follow Along, Dropping 
+Seeds and Covering it … the Seeds Grew”; (b) Staying Active in the Natural World: “When I 
+Would Go Home [from boarding school] in the Summertime, That’s When … We’ll Be Back 
+Being an Indian”; (c) Staying Active through Culture: “The Traditional Dancing … [is] a Form 
+of Exercise”; (d) Mental Wellness in Nature: “It Seemed Like Just Sitting Out There Makes 
+You Feel Better” ; and (e) Sports and Competitions Fostering PA: “A lot … Prefer Playing 
+Softball, Basketball, V olleyball, Nowadays” . Results highlighted how participants preferred and 
+participated in subsistence and PA growing up, how this had evolved over time, and how being 
+outside in nature contributed to a sense of wellness and overall health.
+According to the Indigenous framework of historical oppression, resilience, and 
+transcendence (FHORT; Burnette & Figley, 2017 ), the disruption of Indigenous foodways 
+is a devasting form of historical oppression (i.e., historical traumas and continued 
+This is an open access article under the CC BY-NC-ND license ( http://creativecommons.org/licenses/by-nc-nd/4.0/ ).
+catmckinley@tulane.edu. 
+Ethics approval
+All procedures performed in this study involving human participants were in accordance with the ethical standards of the institutional 
+and/or national research committee and with the 1964 Helsinki Declaration and its later amendments or comparable ethical standards. 
+This research gained approval from social-behavioral sciences component of the Tulane University’s IRB board [Study: 2018-1372-
+OTH].
+Consent to participate
+Informed consent was obtained from all individual participants included in the study.
+Declaration of competing interest
+The author has no relevant financial or non-financial interests to disclose.
+HHS Public Access
+Author manuscript
+SSM Qual Res Health . Author manuscript; available in PMC 2022 December 28.
+Published in final edited form as:
+SSM Qual Res Health . 2022 December ; 2: . doi:10.1016/j.ssmqr.2022.100170.
+Author Manuscript Author Manuscript Author Manuscript Author Manuscriptcontemporary and chronic exploitation ( Burnette & Figley, 2017 )) that drives inequities 
+in health and wellness; yet Indigenous peoples have persisted, resisted, and transcended 
+such colonial oppression. Historical oppression  has disrupted subsistence and concomitant 
+physical activity (PA) with historical traumas and contemporary policies and structural 
+oppression ( Burnette & Figley, 2017 ). Historical oppression has interrupted Indigenous 
+peoples’ connection to land, the environment, and access to safe and healthy foods and 
+environments ( Mihesuah & Hoover, 2019 ; Walters et al., 2011 ).
+Federal policies have undermined Indigenous peoples’ control and land management, 
+interrupted harvesting, growing and subsisting practices, and contributed to extensive health-
+related problems ( Gurney et al., 2015 ). Social determinants of health, such as racism, 
+classism, high risk and under-resourced communities, and trauma are known risks for 
+obesity ( Bullock et al., 2017 ). These structural determinants of health have given rise to 
+higher rates of obesity and lower rates of PA for Indigenous peoples in comparison with 
+non-Indigenous peoples ( Jernigan et al., 2012 ). Obesity and low rates of PA lead to a host of 
+chronic health problems driving mortality ( Jernigan et al., 2012 ).
+Across age groups, U.S. Indigenous peoples (scope here is limited to American Indian and 
+Alaska Natives) are disproportionately likely to experience obesity ( Bullock et al., 2017 ; 
+Redmond et al., 2019 ; U.S. Department of Health and Human Services, 2020 ), which 
+drives health inequities, including the prevalence of diabetes being three times that of non-
+Indigenous peoples ( Indian Health Service, 2019 ). Indigenous adolescents are 30% more 
+likely than non-Hispanic Whites to be obese; their adult counterparts are 50% more likely to 
+have high blood pressure, high levels of blood fats, diabetes, and LDL cholesterol, which are 
+risks for heart disease and stroke ( U.S. Department of Health and Human Services, 2020 ). 
+Associated health problems extend to younger children as well, according to Bullock et al. 
+(2017) . Indigenous children. ages 2–19, were more likely to be obese than non-Indigenous 
+children; obesity among youth is a documented risk for obesity as an adult, along with 
+and chronic health problems ( Bullock et al., 2017 ); this disparity is thought to be linked 
+to a replacement subsistent and physically active with a rapid transition to more sedentary 
+lifestyles ( Bullock et al., 2017 ). According to Mihesuah (2019) , children have been spending 
+less time playing and exploring outdoors, and adults are more separated from the natural 
+world, which diminishes interest and appreciation of nature.
+Over 40% of the adult Indigenous population experiencing obesity, which is driven, in 
+part, by over half (in comparison with 44% of non-Hispanic Whites) of Indigenous peoples 
+aged 18 and older not meeting the federal guidelines for PA ( Redmond et al., 2019 ). 
+Social determinants of health, such as socioeconomic inequalities, education disparities, and 
+associated stressors and time constraints, undoubtedly drive many barriers to PA and healthy 
+eating ( Redmond et al., 2019 ). For example, the Diné (Navajo Native American peoples) 
+moved away from gardens and, through trade and government rations and commodities, 
+consumed more white flour, sugars, and canned fruits ( Livingston, 2019 ). Livingston (2019) 
+describes this change in foodways giving rise to health problems, such as diabetes and 
+obesity –the combination of which called was called diabesity . Subsistence includes the 
+activities through which food is accessed, prepared, processed, and consumed, generally 
+through gathering, growing, hunting, and fishing ( Burnette et al., 2018 ). Although some may McKinley Page 2
+SSM Qual Res Health . Author manuscript; available in PMC 2022 December 28.
+Author Manuscript Author Manuscript Author Manuscript Author Manuscriptenjoy the time of earning a wage and subsistence, the opportunity is not afforded to many 
+(Lindholm, 2019 ). As Redmond et al. (2019)  explained
+Recent decades have seen a rapid nutrition transition in these populations, from 
+nutrient-dense subsistence foods to energy-dense prepared and packaged foods 
+often high in fat and refined carbohydrates that are associated with increased 
+prevalence of obesity and other chronic diseases. A PA (PA) transition has also 
+been noted, as traditional forms of PA associated with subsistence lifestyles are 
+becoming less frequent and hunting and gathering are no longer necessary for 
+survival, towards greater physical inactivity and lower energy expenditure.
+(p. 81)
+As Lindholm (2019)  explained, nutritional colonialism has impaired the wellness of 
+Indigenous peoples through: (a) a negation in Indigenous subsistence, (b) cultural repression 
+and oppression, (c) fostering sedentary lifestyles, (d) environmental injustice and damage, 
+and (e) associated chronic health and obesity. Indigenous food sovereignty includes rights 
+to self-determine methods of sustainable production, distribution, and consumption of 
+culturally congruent preferred foods whilst honoring the primacy of the connection to 
+land and place of politically sovereign tribes with sacred connections to ancestral lands, 
+cultures, and peoples ( Mihesuah & Hoover, 2019 ). Indigenous peoples have “nested layers 
+of sovereignty” ( Mihesuah & Hoover, 2019 , p. 10), as members across 574 federally 
+recognized tribes with sovereignty ( Bureau of Indian Affairs, 2021 ). The around 400 treaties 
+promise, in perpetuity, that Indigenous sovereign communities’ rights to health, education, 
+housing, and land are upheld ( Le & Aptekar, 2019 ).
+The purpose of this research is to use the FHORT ( Burnette & Figley, 2017 ) to examine 
+past and present forms of physical activities from the perspectives of Indigenous peoples 
+and a non-Indigenous expert in historical archeological data of focal tribal members. The 
+FHORT examines how the historical oppression of colonization undermines Indigenous 
+health and wellness and how Indigenous peoples have resisted and been resilient through 
+decolonizing acts of transcendence ( Burnette & Figley, 2017 ; Guba & Lincoln, 2004 ; 
+Kincheloe & McLaren, 2005 ). FHORT explores culturally grounded risk, promotive, and 
+protective factors across ecological historical, community, cultural, relational, and individual 
+levels that give rise to resilience and strength to illuminate pathways toward greater equity 
+(Burnette & Figley, 2017 ). Risks worsen problems, while promotive factors offer strength, 
+and protective factors buffer challenges ( Burnette & Figley, 2017 ; Masten & Monn, 2015 ).
+The FHORT, integrates Indigenous perspectives on resilience, which frames cultural identity 
+and enculturation (i.e., engagement and participation with traditional activities, including 
+subsistence) as promotive and protective factors ( Burnette et al., 2018 ; Wexler, 2014 ). 
+Promoting wellness. Health, and resilience according to the FHORT encompasses the 
+promotion of unity of family and community, especially through protective cultural practices 
+(Hodge et al., 2009 ). The FHORT poses that transcendence expands beyond resilience, 
+moving beyond adversity while rising above it; for some, working through adversity enables 
+attaining clarified meaning, priorities, growth, life satisfaction, and wholeness ( Burnette & 
+Figley, 2017 ).McKinley Page 3
+SSM Qual Res Health . Author manuscript; available in PMC 2022 December 28.
+Author Manuscript Author Manuscript Author Manuscript Author ManuscriptThe scope of this research is on identifying promotive and protective factors associated 
+with PA among Indigenous peoples. Promotive and protective factors associated with PA 
+foster resilience or positive recovery. Factors associated with skill building in response to 
+adversity contribute to harmony in the environment and wellness , holistic well-being across 
+physical, spiritual, mental, social, and environmental dimensions ( Burnette & Figley, 2017 ). 
+By examining universal themes across two tribal contexts—a Southeast reservation tribal 
+context and an urban Northwestern context—important knowledge about culturally relevant 
+forms of PA can inform holistic interventions to promote wellness and Indigenous resilience 
+while preventing obesity and chronic health conditions.
+1. Methods
+1.1. Research design
+This research focuses on interviews that are part of a broader critical ethnography to 
+develop and test a family-based resilience intervention to promote wellness while preventing 
+violence and substance abuse ( McKinley & Theall, 2021 ). Critical ethnographies are 
+recommended for work with Indigenous peoples by the toolkit for ethical and culturally 
+sensitive work with Indigenous peoples ( Burnette et al., 2014 ; McKinley et al., 2019 ) as they 
+place primacy on how historical oppression drives oppression and inequity in everyday life 
+(Carspecken, 1996 ). With explicit focus on colonial historical oppression and Indigenous, 
+both the FHORT ( Burnette & Figley, 2017 ), inspired by Paolo Freire (2000) , and this 
+critical ethnography guided by the Frankfurt School of critical theory, who expanded 
+beyond the Marxist notion that reduced power differentials to economic differentials to 
+include lived experiences being influenced by gender, race, economic, political, social, 
+cultural, and colonial forces ( Guba & Lincoln, 2004 ; Kincheloe & McLaren, 2005 ). The 
+analysis of this critical ethnography (reconstructive analysis) integrates a frame that people 
+reach agreements about what is reality, by navigating among objective, subjective, and 
+intersubjective perspectives that are influenced by the limits and opportunities within a given 
+power structure ( Carspecken, 1996 ).
+Carspecken’s (1996)  rigorous critical ethnography has been adapted for work specifically 
+with Indigenous communities and used throughout the more than decade of preliminary 
+and community-based research that led to the development of the critical FHORT ( Burnette 
+and Figley, 2017 ; McKinley et al., 2019 ). It has been identified as a “culturally appropriate 
+methodology” ( McKinley et al., 2019 ; p. 87), as both the FHORT, critical theory, and this 
+methodology center power dynamics inherent throughout colonial historical oppression, 
+as well as social change and liberation among their goals ( Burnette & Figley, 2017 ; 
+Carspecken, 1996 ). Data were drawn from 31 participants using critical ethnographic 
+interviews in a Southeast (SE) reservation-based community and a Northwest (NW) urban 
+context.
+Critical ethnography promotes social justice by integrating critical analysis throughout 
+results and discussion ( Allen, 2017 ). Like the FHORT, critical ethnographies integrate 
+critical theory with attention to how power dynamics associated with colonization have 
+undermined Indigenous communities, along with how Indigenous communities have resisted 
+and persisted, despite historical oppression ( Carspecken, 1996 ; Burnette, 2015 ). This inquiry McKinley Page 4
+SSM Qual Res Health . Author manuscript; available in PMC 2022 December 28.
+Author Manuscript Author Manuscript Author Manuscript Author Manuscriptfocuses on the resilience and resistance component of critical theory, rather than how 
+historical oppression has undermined foodways, which is beyond the scope. Moreover, 
+critical ethnography has been posed as a useful frame to examine healthy food as a social 
+justice issue ( Louis, 2016 ).
+1.2. Positionality
+The principal investigator (PI) continues to work with focal Indigenous tribal communities 
+with whom she was invited to work by an Indigenous colleague for approximately 13 years. 
+She works from the liberatory and critical frame of the FHORT that centers decolonization 
+throgh relational dialogues and collection action aimed at emancipation from settler colonial 
+opression. Her work has been guided and framed by the recommendation from Indigenous 
+and non-Indigenous researchers providing a toolkit of working with Indigenous peoples in 
+ethical and culturally sensitive ways ( Burnette et al., 2014 ). Before beginning this work, 
+she engaged in relationships building for a year prior to research and has made career 
+and family decisions to honor and continue the relationships she began over a decade 
+ago (such as moving to the vicinity of the focal communities with her family to be close 
+to and continue this work) and developing life-long friendships and relationships. As a 
+non-Indigenous person, she continually engages in critical reflection on working as an 
+ally whose position is associated with the settler colonist dominant group, while drawing 
+connections and understanding social disadvantage associated with being raised in rural 
+area. She focuses on leveraging privilege to advocate to redress health inequities and to 
+invest in community infrastructure and the professional development of Indigenous health 
+leaders through community-based participatory research with community advisory boards, 
+and currently having trained more than 50 community health leaders who facilitate culturally 
+grounded programs to promote Indigenous family resilience and health equity ( McKinley & 
+Theall, 2021 ).
+1.3. Setting
+Tribal communities are kept confidential in congruence with culturally relevant 
+recommended strategies ( Burnette et al., 2014 ; McKinley et al., 2019 ) and in agreement with 
+participating tribal councils and community agencies to avoids harm through inadvertent 
+mis-interpretations or misuse of sensitive data results which may adversely affected tribal 
+communities and contributed to stigma of already disenfranchised groups ( Burnette et al., 
+2014 ; McKinley et al., 2019 ). The SE tribe is federally recognized and has sovereignty over 
+its own social, community, familial, environmental, healthcare, and educational systems, 
+whereas the urban NW locale centered in a healthcare facility providing services to regional 
+tribal members from sever different tribes. The SE context is situated within the Jim Crow 
+Deep South, and associated discrimination. Older tribal members tended to work in share-
+cropping until the 1960s and 70s.
+2. Data collection
+University Institutional Review Board approval, along with tribal council approval, was 
+secured prior to collecting data. Tribal identities were blinded to follow tribal agreements 
+with focal communities and following suggestions gleaned from Indigenous and non-McKinley Page 5
+SSM Qual Res Health . Author manuscript; available in PMC 2022 December 28.
+Author Manuscript Author Manuscript Author Manuscript Author ManuscriptIndigenous researchers who informed the Toolkit for ethical and culturally sensitive research 
+with Indigenous communities ( Burnette et al., 2014 ). Working with cultural insiders along 
+with tribal and nontribal research assistants enabled recruitment of a purposive sample 
+of Indigenous or non-Indigenous peoples with local foodway knowledge through word-of-
+mouth, posting fliers, and sharing information through online social media ( Burnette et 
+al., 2014 ; McKinley et al., 2019 ). No participants refused to participate or dropped out. 
+Participants had options to be interviewed by a non-Indigenous or Indigenous interviewer 
+or both. All opted for the author to conduct interviews, with an Indigenous member present 
+for those who consented. Interviews took place in local and private meeting rooms at 
+participants’ preferred locations between December and January (2018–2019). Following 
+recommended sample sizes for critical ethnographies and saturation of data ( Burnette et al., 
+2014 ; Carspecken, 1996 ; McKinley et al., 2019 ), the total sample of 31 participants had 
+23 women and eight men, with 16 participants from the SE and 15 from the NW. Table 
+1 displays participant demographics. Saturation was reached around 25 interviews, with 
+several more being collected to ensure redundancy in themes had been reached. Inclusion 
+requirements were that (a) participants were either Indigenous or non-Indigenous peoples 
+with local foodway knowledge (only one archeological expert was non-Indigenous), and (b) 
+that participants were adult or aged 18 greater. Participant compensation for interviews was 
+$50 on a card that could be used for cash or as credit.
+Following preliminary research and recommendations for a culturally congruent research 
+strategy to “reinforce cultural strengths … such as storytelling (p. 82), a life history, or 
+storytelling, approach to interviews enabled participants to describe their life experiences 
+with their own words ( McKinley et al., 2019 ). The life history ethnographic semi-structured 
+interview guide developed and piloted with cultural insiders ( Burnette et al., 2014 ; 
+Carspecken, 1996 ; McKinley et al., 2019 ). Interview questions followed research questions 
+to understand how PA had changed from past to present cohorts. Interview questions related 
+to this inquiry were: “How did tribal community members get physical exercise in the old 
+days/ways? What are memories, if any, that you have of activities related to PA (Where, with 
+who, how)? How do you think this relates to well-being? How does it compare with how this 
+is happening today?”
+2.1. Data analysis
+The PI led reconstructive thematic qualitative analysis was completed with input from a 
+team of six Indigenous cultural insiders also from the focal tribal communities and three 
+research assistants familiar with the methodology and immersed in related data for years 
+(McKinley et al., 2019 ; Guest & MacQueen, 2008 ). Audio-recorded and professionally 
+transcribed interviews were analyzed through the qualitative analysis software called 
+NVivo.1 Reconstructive analysis is a thematic analysis specific to this critical ethnography 
+and analysis of explicit and implicit meanings of data that center the examination of power, 
+liberation ( Carspecken, 1996 ), and the critical FHORT. This article focuses on promotive 
+factors related to PA, which promote Indigenous resilience. Interview transcripts were 
+reviewed for accuracy, then read and listened to two or three times each, with the PI 
+1A qualitative data analysis software program.McKinley Page 6
+SSM Qual Res Health . Author manuscript; available in PMC 2022 December 28.
+Author Manuscript Author Manuscript Author Manuscript Author Manuscriptfirst coding several transcripts according to research questions and emergent themes and 
+creating coding examples and a hierarchy of themes codebook with overarching themes 
+and subthemes. Analysts completed line-by-line coding, each checking transcripts of each 
+other. The PI reviewed all themes, and all available participants and cultural insiders checked 
+interpretations through the final summary of themes, associated quotes, and interpretations 
+of data. Final themes and subthemes were arrived at and finalized through dialogue until 
+consensus was reached in research team meetings held bi-weekly.
+Summative themes and interview transcripts were shared with all participants who could 
+be reached (i.e., over 80% of participants). Participants could change, amend, or refine 
+themes; all agreed, extended, and affirmed summative findings and interpretations of data 
+during member checks. This particular method allows researchers to examine overarching 
+themes across contexts ( Burnette et al., 2014 ; McKinley et al., 2019 ). Respondents’ region 
+and gender are reported in the results to add context for the reader. Themes about PA were 
+present across all participants and have been shared and approved multiple times with the 
+partner agencies and tribal council. Results inform current and future interventions with 
+the focal tribes to promote health, wellness, and resilience, while preventing violence and 
+substance abuse ( McKinley & Theall, 2021 ).
+3. Results: moving naturally through being in nature and subsistence
+Results spanned across several themes at how participants preferred and participated in 
+subsistence and PA growing up, how this had evolved over time, and how being outside 
+in nature contributed to a sense of wellness and overall health. Themes included (a) Family-
+Centered PA: “The Kids Would … Follow Along, Dropping Seeds and Covering it … the 
+Seeds Grew”; (b) Staying Active in the Natural World: “When I Would Go Home [from 
+boarding school] in the Summertime, That’s When … We’ll Be Back Being an Indian”; (c) 
+Staying Active through Culture: “The Traditional Dancing. … [is] a Form of Exercise”; (d) 
+Mental Wellness in Nature: “It Seemed Like Just Sitting Out There Makes You Feel Better” ; 
+and (e) Sports and Competitions Fostering PA: “A lot … Prefer Playing Softball, Basketball, 
+V olleyball, Nowadays” . The focus now turns to those themes.
+3.1. Family-Centered PA: “the kids would … Follow along, dropping seeds and covering it 
+… The seeds grew”
+Like in historical times, the whole family joined in harvesting and raising plant life. As 
+subsistence and outside work and play happened in the context of the family and contributed 
+to resilience as much learning and positive socialization occurred with family members 
+while working together outside, including how to live off the land and other life lessons. 
+A SE male archeological expert added the relationship of subsistence to natural physical 
+movement:
+Oh, physical and movement. … tending fields may have involved considerable 
+movement over distances. …—the physical movements of people in the context of 
+hunting probably involved movements over considerable distances … for prolonged 
+periods of time.McKinley Page 7
+SSM Qual Res Health . Author manuscript; available in PMC 2022 December 28.
+Author Manuscript Author Manuscript Author Manuscript Author ManuscriptAs described, much learning and positive socialization occurred with family members 
+working together outside. Children would learn important life lessons, as a female SE 
+participant stated:
+I had to tend those garden[s], as a child. … I think I remember as far back as maybe 
+when I was 4 years old, I was, you know, when my dad and my mom were out in 
+the garden, the kids had to be out in the garden too. … They were teaching us … 
+You put two seeds here and cover it up. … They’d go far, far enough ahead of us 
+that the kids would just follow along, dropping seeds and covering it up. And then, 
+as the seeds grew, you know, it was time to tend the garden, like making sure all the 
+weeds were not there.
+She added information about her active lifestyle and how she got exercise growing up,
+Being outside was the primary thing. … You were told to go outside and just be 
+outside and play. … Well, one of the biggest things that we did was climbing trees, 
+climb trees, you know, sit up in this big old cedar tree and look out all over the 
+place
+Climbing trees not only was a fun activity, but it also gave her a vantage point that 
+was expansive that likely promoted mental wellness. Yet, another female NW participant 
+described outside activity and the mental wellness it fostered: “If we weren’t hunting, we 
+were riding horses, we were always doing something outside. … We would like move 
+people’s cattle and stuff. …. I had a wonderful, wonderful life.” Whether for the service of 
+other people or one’s own family working outside was commonly spoken about.
+A female SE participant emphasized that chores and being outside made for an active 
+childhood: “We were cutting grass, mowing lawn, big old yard. Sweat it out.” This concept 
+of “Sweating it out” had come out as a theme spoken about by elders, indicating not only 
+physical health, but spiritual and mental clarity and cleansing. Another female SE participant 
+stressed the importance of being active growing up. She described: “It was mostly like you 
+couldn’t be lazy. You have to, you had to participate in stuff. We had to clean, cook, work in 
+the gardens, uh, go to school, come back, do chores.” A male NW participant added:
+We played outside. … Working the chores is probably our exercise. …. My 
+grandma was strict, and my daddy was strict, you have to, you have to be always 
+working on something. You can’t sit and watch TV . … You were chopping wood, 
+or you were putting stuff in the freezer.
+Despite being very active growing up, this participant felt that a balance, with more active 
+play allowed would have been preferable.
+3.2. Staying active in the natural world: “when I would go home [from boarding school] in 
+the summertime, That’s when … We’ll Be back being an indian”
+A recurrent theme was that participants preferred to move naturally and gain physical 
+exercise through activity in the natural environment. A female SE participant described the 
+importance of walking as a form of PA: “Start walking … no matter where … you can just 
+walk, get as many miles as you can … now you have to … pay at the gym … it could save 
+you money; … take a stroll down the road.”McKinley Page 8
+SSM Qual Res Health . Author manuscript; available in PMC 2022 December 28.
+Author Manuscript Author Manuscript Author Manuscript Author ManuscriptParticipants overwhelmingly preferred to move naturally and gain physical exercise through 
+activity in the natural environment. When asked being physically active, a SE participant 
+answered: “Yes, we were. … My mom … she bought us bicycles. … Cutting wood is 
+another exercise and bringing it into the porch, that’s exercise. So, we were not fat kids.” 
+When asked how she stayed active, a female SE participant replied about the hard living but 
+also helpful skills-building:
+We were living at … a shack house. … I would get those 5-gallon buckets, two 
+each. And I would go down the hill and get the water. … And in the wintertime, 
+me and my sister, [name], mom used to give us chores. She used to say, when I 
+come back from work, I better see wood … if not, we’re going to be cold. …. If 
+we weren’t in school … like during the summer, there was always something to do. 
+… Me and my sister, we would help … like they needed somebody to pick the, the 
+cucumbers, …the small ones for pickles. We will pick that, or we would pick butter 
+beans, or peas, or corn. … The people that we were renting our house from, um, 
+sometimes they would want us to rake for them. … Or sometimes they would want 
+us to clean out their garden.
+This participant described living in meager conditions, but that she worked with her family 
+to support family income and stay active. Yet another female SE participant remembered:
+Well, our job was to—my mom cooks. In those days. We had like, um, iron stove. 
+So, we, our job was to get the woods inside the house … Plus, we had a pump. One 
+of those water pumps outside. … When we got used to it, it was nothing to us.
+She went on to add the positive social influence this had, the sense of responsibility, and 
+the absence of family conflict: “It seemed like we didn’t have time to argue or call each 
+other names because my mom kept us busy … with washing clothes or … pumping that 
+water pump, and [we] made sure we kept an eye on the two younger ones.” When asked if 
+this differed from the PA of today’s younger generation, she contrasted being outside with 
+sedentary activity associated with technology:
+There’s not enough exercise. … I see all these little kids, they’re plumped and … 
+on the TV … and they have lack of exercise … Go out there, help with the garden 
+… and cut the grass. … It’s mostly adults doing that for the little kids … they 
+need to teach these kids how to … go out there and do your chores outside and 
+stay outside. … That’s why we were never fat. … Now, I see all these diabetes … 
+because there’s so many greasy … and takeout food, and less exercise. … If we can 
+… do more exercise and eat right … it will be less diabetes … on the reservation.
+This participant instilled the importance of PA in her children and grandchildren. 
+Subsistence and chores contributed to much PA. Despite the difficulty of working on the 
+land with family, it had a different quality than a male NW participant remembered as a 
+boarding school student:
+When I would go home [from boarding school] in the summertime, that’s when 
+the, we’ll be back being an Indian. While we were there [at boarding school], we 
+were ordered, we were told what to do and stuff. Well, same at home, but it wasn’t 
+brutal . … It was good  at home. Do this, you do that because you have to fish. We McKinley Page 9
+SSM Qual Res Health . Author manuscript; available in PMC 2022 December 28.
+Author Manuscript Author Manuscript Author Manuscript Author Manuscriptgotta eat, you know, you got to carry water, go get wood. … We knew we had to do 
+that to survive, and for our sisters and brothers … but down there … you had to do 
+it or otherwise you get in trouble.
+This participant felt the negative effects of the historical oppression and poor treatment in 
+boarding schools, which was contrasted with the hard work related to subsistence. Despite 
+working on the land being difficult, working hard for subsistence and well-being of the 
+family felt better and had a different quality than the child work he was forced to do as 
+a missionary boarding school student. Unlike boarding school experiences, the hard work 
+involved in subsisting was not imposed on family members to control or oppress them, but 
+rather, to live and contribute to the broader family. Similarly, another male NW participant 
+remembered: “Go down to the lakes … and some of the cricks, go swimming there, and then 
+… wintertime, a lot of sledding. … We had chores … dishes, cleaning up.” He remembered 
+being outside a lot:
+It was mostly walking, and exploring, and that type of stuff. … My grandma would 
+always have something for us to do. Like we’d have to go cut willows that she 
+could use to build a sweathouse, and … we’d also go up and pick up, kind of haul 
+firewood, because she had wood stone. … And it was hard … We had to go out and 
+bale … hay.
+A female SE participant contrasted physical activities growing up versus present-day:
+Back then, it was like you were on go … [with] the gardening and stuff. … But 
+now because the … fast food, they don’t exercise … So, it’s just mainly majority of 
+us are kind of put your kind of pudgy.
+3.3. Staying active through culture: “The Traditional Dancing … [is] a form of exercise”
+PA could also be embedded in traditional cultural activities, such as dancing, playing 
+stickball, and other practices. Some of this knowledge had become less accessible for 
+community members who did not grow up with strong knowledge of cultural traditions. A 
+male SE participant explained how knowledge had been lost:
+They don’t know our history. They don’t know Native American history. … What 
+they don’t know is that [tribal name], pow wow was just recent naming. We had 
+dances all the time, all-night dances and I still remember that. … One singer would 
+sing the traditional dance songs … and they would dance until the morning.
+Moving naturally in traditional cultural ways could be a form of exercise, as a female SE 
+stated:
+With exercise … I came up with this ‘moccasins boogie woogie.’. … It was like, 
+kinda like exercising but dancing also together and getting ready for the fair. … 
+I lost a few pounds. … We did it twice a week for 12 weeks. Two hours. … We 
+also provided water, and the diabetes program they … they donated fruits. The 
+traditional dancing … [is] a form of exercise. … We did have two dance groups … 
+and we had like 47 [participants]. …… I’m thinking of doing another one because I 
+enjoyed it, and I also lost weight.McKinley Page 10
+SSM Qual Res Health . Author manuscript; available in PMC 2022 December 28.
+Author Manuscript Author Manuscript Author Manuscript Author ManuscriptRelated to living in balance and harmony with the world, participants spoke about living in 
+alignment with their current physical health to continue to live a healthy life in an achievable 
+way. An older female SE spoke about living in alignment with her aging body to stay active:
+Well, as, as an older person now, my exercise routine is totally unique. … I have to 
+individualize my, my needs… I know what works in my body and what hurts, and 
+when it hurts, and that’s when I start investigating whether is it something that I am 
+doing wrong, or is it something that I need to take to the doctor and get attention on 
+it, or do I just let it sit there… and see what happens.
+Although the forms of PA changed with time and age, through awareness gained from 
+watching nature and paying attention to body cues, participants worked in harmony with 
+their age and stage of their physical body. One male SE participant spoke about how staying 
+active was important for health:
+My mom used to say is, that when you’re active, your blood needs to run. It makes 
+your blood flow. … Circulation. And I think that’s part of the reason why, although 
+… I have knee problems … I still walk, I can’t run like I used to, but. … I talked 
+to one of my classmates yesterday, she said, you know, at least half of our class 
+has died. Passed on. This was in, we graduated in 1974. … I thank my parents for 
+teaching me to be active.
+3.4. Mental Wellness in Nature: “It Seemed Like Just Sitting Out There Makes You Feel 
+Better”
+Further, many participants described being in nature as a positive outlet for mental health 
+and wellness. Being active not only helped one’s body; a female SE participant spoke about 
+how being active and outside in nature helped her clear her mind. She explained,
+When I get so worried about something, I sit there [outside] and I think about my 
+problems … but I’m not gonna let this bring me down; I have plenty of things to 
+do. So, I start doing things around the house and go outside and try to trim my 
+bushes.
+She went on to elaborate:
+I have a, I have a swing behind my house. Under the tree, I go sit there and I just 
+sit there and I, I think … and it seems like the outside world is here for us. We just 
+take advantage of it because the air is fresh and -You look up at the trees and say 
+golly, so many people got so many problems. And here I think I got this problem, 
+and you know, I talk to God, and I feel better. It seemed like just sitting out there 
+makes you feel better. … If we could just go back to the old ways a little bit, not 
+all of it. … It’d be good. … Nowadays, it’s just like we’re living in a fast lane, 
+and the fast pace where—and then the kids are all, got the remote and on TV , and 
+diabetes is just keep coming … in because of the laziness that we got. Then the kids 
+… eating too many junk food and take out.
+Often, they learned this coping skill from seeing it modeled by family members. Being 
+outside seemed to be a particular socially acceptable and effective form of stress 
+managements for males, some of whom expressed that they had been taught that men McKinley Page 11
+SSM Qual Res Health . Author manuscript; available in PMC 2022 December 28.
+Author Manuscript Author Manuscript Author Manuscript Author Manuscriptdon’t express vulnerability. This participant may have learned this coping from her mom, as 
+described:
+If she had an argument, or she was depressed … she would chop that wood. 
+[laughter] I think that’s the only way I could see that she probably got her 
+frustration out was chopping them wood. … One day she was really chopping 
+them, and I said, we got to go pick it up after her, slow down! … I think that’s, how 
+she dealt with it [frustration].
+Yet another female SE participant spoke about how she and her husband found relief 
+outdoors:
+My husband … gets stressed from work, or … he’s becoming depressed. … He’ll 
+be like, “I’m going hunting, I’m going fishing, or I’ll be back.” … I’m like, he 
+needs his air … from the stress. … Me, if I’m mad, I’m, I’ll get into the cleaning 
+and I don’t want to be bothered, or … I’ll do yard work, and I’ll be outside, and 
+that’s a big relief from the pressure, or the stressing. … My cousins said the best 
+thing to do is go fishing.
+One female NW participant expressed the importance of understanding your emotions, 
+stating:
+My head was full. … I had emotional and personal pain. I’ve been hurt. But I had 
+the strength to survive. I didn’t quit. I didn’t shoot myself. I didn’t hate myself. 
+I didn’t go off jumping from one relationship to another. No, I coped with it. … 
+Emotions. … They were … very hard. But I took those emotions, and I took, 
+because each emotion has … a lesson, and you take that lesson, and you can get rid 
+of the garbage. You keep the feeling you learned. … You understand each emotion. 
+That’s why I said you have to know your emotions. You have to know what they 
+feel like, they smell like. … You have to be able to touch them, and see them, taste 
+them, to really understand them.
+Participants emphasized the importance of understanding one’s feelings and sharing them 
+with safe people. Some understood themselves by observing and learning from the natural 
+environment to gain personal and insights about the world. When asked where she gained 
+this awareness, female NW participant connected it to observing nature:
+By watching the flowers and the birds. … I’d watch the leaves too. When the rain 
+comes, you learn to read the … signs. And there’s a feeling, there’s a happiness in 
+the trees. And the leaves show it, there’s sun … they’re happy. And you feel it. You 
+can touch it. … You see it. … You just make yourself fully aware.
+This participant also spoke how being active can help with negative emotions; he described 
+how an elder had told him, “She was talking about the gardening, and she said … that’s 
+where … you think about things, and what you need to do, or what you don’t need to do.” 
+Still, another male NW participant spoke about how he coped in an active way, as stated, 
+“When I start feeling like funky … that’s your body saying you need a break … you know, 
+sleep in. He stated, “I do something personally that makes me feel good. … I usually head 
+up to the mountains for a day … If you do that, your body says, okay, well let’s get back 
+on.”McKinley Page 12
+SSM Qual Res Health . Author manuscript; available in PMC 2022 December 28.
+Author Manuscript Author Manuscript Author Manuscript Author Manuscript3.5. Sports and Competitions Fostering PA: “A lot … prefer playing softball, basketball, 
+volleyball, nowadays”
+Although living off the land was less common, sports were very common in tribal 
+communities, offering a way to be physically active and promote community. One male 
+NW participant thought this was important for developing peer groups, particularly in a 
+community context where the tendency to be exposed to substance abuse and high-risk 
+social behaviors brought many of his loved ones down. He recalled playing “basketball, 
+football, and track.” He described the positive impact of sports:
+Boarding school, we, it was … a good thing. … We got ice skates, bow and arrows, 
+basketballs, Boy Scout stuff. Everything was brand new. … And we had a lot of fun 
+… because we shared each other’s company and sorrows.
+His peers helped him. They played sports, fished, and trapped together:
+I’d say just being with each other, you know, meant a lot. You know, and we had 
+to split up, you know, in the summertime, we all went our ways, you know, and 
+some of them went to foster homes, aunts and uncles and wherever, but we all knew 
+we would be back together, and that was a good part is coming back together. We 
+played basketball, football … and we were named the fastest guards in the state of 
+[specific region]. … We fished all the time down there. We trapped … beaver and 
+mink.
+Another male SE participant spoke about how sport united families and communities:
+I’ve thought about … those … weekend baseball games … the community. Playing 
+teams from the other [tribal] communities would come over and all of that during 
+that season, baseball season, and they would bring their food and … they had those 
+big gatherings.
+Another female SE participant recalled: “We always play softball … and kickball … because 
+our kids are softball players. … We play basketball. We had a big goal and everything.” A 
+female SE participant stated:
+They’re very physically active here. That is good. So that’s one thing. It seems like 
+even as adults, people play ball. … Like athletics helps them because they are going 
+to sweat out … whatever or whatever is in their body, but that’s not what they’re 
+doing.
+One female SE participant felt the current level of participation in sports was a good thing:
+Nowadays, the kids go to the gym and play. … I like it … because they exercise 
+by playing basketball, and they stay there all day sometimes. They play softball and 
+they get into tournament. That’s another thing I like to see … even the little kids, 
+they start them off with tee ball … that and that’s a very good exercise for the little 
+kids coming up.
+There could be a lot of tribal pride in sports successes, as stated by this SE female: “A lot 
+of them, prefer playing softball, basketball, volleyball, nowadays, and I think that’s good. McKinley Page 13
+SSM Qual Res Health . Author manuscript; available in PMC 2022 December 28.
+Author Manuscript Author Manuscript Author Manuscript Author ManuscriptThat’s very good for exercise instead … just sit there.” Thus, sports were a compelling way 
+that many people stayed active and enjoyed community.
+4. Discussion
+Results indicated the following promotive factors for PA and overall Indigenous resilience 
+and wellness, including subsistence and outdoor activities that were inclusive of the whole 
+family, that involved nature and chores outside, that being outside not only improved 
+physical health and provided foods through fishing, gardening, and hunting, but also 
+contributed to mental wellness. Other research has found that subsistence promotes 
+resilience, by fostering a healthy diet, PA, family along with cultural bonding, and mental 
+wellness ( Burnette et al., 2018 ; McKinley et al., 2020 ). In recent times, sports and 
+recreation had replaced mush of the subsistence that had once promoted PA. Consistent 
+with research ( Bullock et al., 2017 ; Mihesuah, 2019 ), subsistence and gardening involved 
+significant physical exercise, and these practices occurred historically with the whole family 
+contributing. Participants seemed to prefer and continually remarked on keeping physically 
+active growing up by being outside and in nature, rather than signing up for a gym 
+membership, per se. Parallel to extant research, physical exercise through subsistence and 
+chores had become less common due to the fast pace of society ( Lindholm, 2019 ; Mihesuah, 
+2019 ). Now, participants stayed active through sports, lawn care, walking, visiting lakes and 
+swimming, and being outside in general. PA could also be embedded in traditional cultural 
+activities, but some of this knowledge had been lost. Several participants mentioned that PA 
+in the outdoors promoted “sweating it out,” a traditional valued expressed in this localized 
+context. Whereas in the past, this occurred through outside, work, it had evolved to include 
+sports and recreation.
+Being active and outside in nature helped participants mental wellness, as it helped them 
+clear their minds, transform negative emotions, and find relief from stress in a healthy way. 
+Many members expressed cultural pride, physical agility, and talents of tribal members 
+regarding sports, which were important for developing peer groups, particularly in a 
+community context where the tendency to be exposed to substance abuse and high-risk 
+social behaviors was evident. Participants spoke about how sports drew families and 
+communities together with a lot of tribal pride in sports successes, which enhanced 
+community connections and cohesion.
+5. Implications
+For millennia, Indigenous peoples have been resilient to historical oppression and have 
+nourished their peoples through subsistence ( Lunsford et al., 2021 ). Traditional diets 
+fostered resilience by affording people with healthy and culturally appropriate regional 
+foods, including wild meats, thousands of varieties of corn, and a wide array of vegetables 
+and fruits ( Gurney et al., 2015 ). European invaded not only impaired Indigenous peoples’ 
+connections to ancestral homelands, but they also disrupted the cultural continuity and 
+connection to land and healthy eating of traditional foods, such as squash, corns, and 
+beans, and foods from hunting, fishing, and foraging ( Lunsford et al., 2021 ). Relevant 
+policies that impaired subsistence include the Indian Removal Act (1831), which removed McKinley Page 14
+SSM Qual Res Health . Author manuscript; available in PMC 2022 December 28.
+Author Manuscript Author Manuscript Author Manuscript Author ManuscriptSoutheastern tribes from ancestral homelands West on the Trail of Tears ( Howard University 
+School of Law, 2018 ) and the Indian Appropriations Act (1851), restricting Indigenous 
+peoples to reservations (National Library of National Libraries of Medicine, 2022 , p. 
+1851), and impairing access and land and subsistence ( Mihesuah, 2019 ). Indigenous peoples 
+experienced malnutrition and starvation, living off rations (frequently were expired and 
+spoiled) with processed foods that tended to be high in carbohydrates, sugars, and fats, 
+with impaired access to vegetables, fruit, and subsistence ( Mihesuah, 2019 ). Mihesuah 
+(2019)  stated, “Many Indians have eaten their traditional foods, hunted, and gardened 
+their entire lives. Most, however, have not” (p. 98). Restrictions on time and resources as 
+consequences of historical oppression have made it difficult to maintain cultural continuity, 
+which promotes Indigenous resilience, including subsistence, whereas rapid lifestyle and 
+cultural changes interfere with resilience ( Allen et al., 2014 ; Burnette et al., 2018 ).
+Participants described promotive factors and persistent decolonial cultural practices that are 
+inclusive of Indigenous resilience ( Burnette et al., 2018 ; Wexler, 2014 ), such as subsistence, 
+gardening, hunting, fishing, and nature based healing and wellness through being outside. 
+These promotive factors were situated under the blanket of historical oppression of boarding 
+schools and economic marginalization as indicated by living in “shack houses”, having 
+limited electricity and economic resources, and working in service positions for other people 
+rather than having economic autonomy. Alongside the practical insights for programming 
+can be gleaned by this work, economic policies that redress historical oppression in the 
+forms of economic marginalization and the devastation from past policies are implicated to 
+promote Indigenous health.
+6. Limitations and future directions
+This research represents a decolonizing investigation of what practices may promote health 
+in culturally relevant ways. It centers the voices of Indigenous peoples and provides 
+pathways for program development that follow the needs and preferences of Indigenous 
+peoples. Future research can build upon preliminary findings to develop culturally grounded 
+programs that enhance the natural protective and promotive factors related to PA and the 
+outdoors gleaned through this research. Quantitative and nationally representative research 
+may extend this work to see if the emergent themes translate to other rural, reservation-based 
+contexts and urban contexts, as in this qualitative inquiry. Although participants came 
+from cross-national urban and rural contexts, Indigenous practices are localized and not 
+generalizable. However, themes may translate across locales. Future research can invest in 
+culturally specific and community driven and engaged research that highlights community 
+members’ capacity to ignite collective change. Nature-based healing and experiential 
+outdoor programming are particularly promising avenues for such programming and may 
+build off extant research centering these components (See for example: Carter et al., 2007 ; 
+Linke, 2015 ; Overbey & Diekmann, 2021 ).
+7. Conclusions
+Although distinct needs and preferences of communities vary by tribe and context, culturally 
+congruent programming and solutions that inspire a reconnection to land and access McKinley Page 15
+SSM Qual Res Health . Author manuscript; available in PMC 2022 December 28.
+Author Manuscript Author Manuscript Author Manuscript Author Manuscriptto culturally appropriate and healthy food strengthen progress toward Indigenous food 
+sovereignty are warranted ( Kamal et al., 2015 ). Ideas for programs to promote PA gleaned 
+from results include outdoor activities seem the most appealing when the weather permits, 
+with indoor sports and cultural activities for other times. Having a menu of physically 
+active and accessible activities may be best to be agile with the weather and time to meet 
+the variable preferences and accessibility of different activities across distinct times and 
+seasons in the year. Cultural celebrations may be extended for greater preparation time, like 
+incorporating dancing as a PA while also learning about and optimizing health and cultural 
+cohesion. People spoke about tribal traditional dancing and basketball as such activities in 
+the samples. Outdoor activities related to subsisting that vary for contexts generally include 
+gardening, hunting, fishing, chopping wood, and doing yard work.
+Many subsistence activities connect Indigenous peoples with each other and cultural 
+traditions through storytelling and promote wellness across physical, mental, spiritual, 
+and social realms. Moreover, walking is a natural way to be in nature that is easily 
+accessible, can be done in groups, and is low impact across age and stage. Having 
+accessible, safe, and secure walking trails to tribal members may be an integral investment in 
+community infrastructure that could promote the health and wellness of Indigenous peoples 
+dramatically. Other appealing activities for different ages, such as traditional Indigenous 
+sporting games, boating, fishing, hiking, berry picking, gardening, harvesting, and hunting, 
+could create energy and adventure around outdoor activities and challenges that may be 
+appealing to youth. Gardening is also important because it encourages PA and time spent 
+in nature, both of which are important for physical and spiritual health and well-being 
+(Burnette et al., 2018 ; Maller et al., 2006 ).
+Other research has explored experiential activities as an intervention for obesity, diabetes, 
+and physical activities. Schultz et al. (2016)  described one such wilderness experience 
+program that centered Indigenous worldviews to enable Indigenous women to reconnect 
+to place, their bodies, and health. This holistic program placed primacy on traditional and 
+ecological knowledge and the interconnections of all things and seeing health problems 
+as imbalances across social, physical, spiritual, psychological, and environmental domains 
+(Schultz et al., 2016 ). As Indigenous women walked the path of their ancestors’ removal, 
+they experienced changes and improvements in attitudes, beliefs, and health behaviors 
+(Schultz et al., 2016 ).
+Lindholm (2019)  explained, “Because cultural health is considered a byproduct of physical, 
+mental, and social health, a return to more subsistence based lifestyles and diets is perceived 
+as essential for all areas of individual and community health” (p. 170). In contrast to 
+nutritional colonialism, Lindholm (2019)  adds, “Decolonial acts include sharing with friends 
+and family and engaging in subsistence practices, that brings communities and families 
+together” ( Lindholm, 2019 , p. 166). Subsistence activities also provide a combination of 
+PA and relationship building that contributes to well-being. Identity and sense of place are 
+essential to mental health, meaning that intervention programs must recognize the cultural 
+significance of subsistence activities. Decision-making to promote PA must be community-
+driven, culturally relevant, and reflect the priorities of the communities most affected.McKinley Page 16
+SSM Qual Res Health . Author manuscript; available in PMC 2022 December 28.
+Author Manuscript Author Manuscript Author Manuscript Author ManuscriptFunding and acknowledgements
+The author thanks the dedicated work and participation of the tribes and collaborators who contributed to this work. 
+We thank Jennifer Lilly, Jessica Liddell, Hannah Knipp, Maple Dynan Tamela Solomon, Nikki Comby, the Former 
+Harold “Doc” Comby, Jennifer Martin, Maple Dynan, Emily Matt Salois, and Dana Kingfisher for their assistance. 
+This work was supported, in part, by Award K12HD043451 from the Eunice Kennedy Shriver National Institute of 
+Child Health & Human Development of the National Institutes of Health (Krousel-Wood-PI; Catherine McKinley 
+(Formerly Burnette)-Building Interdisciplinary Research Careers in Women’s Health (BIRCWH) Scholar); and by 
+U54 GM104940 from the National Institute of General Medical Sciences of the National Institutes of Health, which 
+funds the Louisiana Clinical and Translational Science Center. Research reported in this publication was supported 
+by the National Institute on Alcohol Abuse and Alcoholism of the National Institutes of Health under Award 
+Number R01AA028201). The content is solely the responsibility of the authors and does not necessarily represent 
+the official views of the National Institutes of Health.
+References
+Allen M (Ed.). (2017). The SAGE encyclopedia of communication research methods. SAGE 
+publications.
+Allen J, Hopper K, Wexler L, Kral M, Rasmus S, & Nystad K (2014). Mapping resilience pathways 
+of Indigenous youth in five circumpolar communities. Transcultural Psychiatry, 51(5), 601–631. 
+10.1177/1363461513497232 [PubMed: 23965730] 
+Bullock A, Sheff K, Moore K, & Manson S (2017). Obesity and overweight in American Indian 
+and Alaska Native children, 2006–2015. American Journal of Public Health, 107(9), 1502–1507. 
+10.2105/AJPH.2017.303904 [PubMed: 28727519] 
+Bureau of Indian Affairs. (2021). Bureau of Indian Affairs. https://www.bia.gov/bia .
+Burnette CE (2015). Indigenous women’s resilience and resistance to historical oppression: A case 
+example from the United States. Affilia, 30(2), 253–258. 10.1177/0886109914555215
+Burnette CE, Clark CB, & Rodning CB (2018). Living off the land”: How subsistence promotes 
+well-being and resilience among Indigenous Peoples of the Southeastern United States. Social 
+Service Review, 92(3), 369–400. 10.1086/699287 [PubMed: 30853722] 
+Burnette CE, & Figley CR (2017). Historical oppression, resilience, and transcendence: Can a holistic 
+framework help explain violence experienced by Indigenous people? Social Work, 62(1), 37–44. 
+10.1093/sw/sww065 [PubMed: 28395035] 
+Burnette CE, Sanders S, Butcher HK, & Rand JT (2014). A toolkit for ethical and culturally sensitive 
+research: An application with Indigenous communities. Ethics and Social Welfare, 8(4), 364–382. 
+10.1080/17496535.2014.885987
+Carspecken P (1996). Critical ethnography in educational research, a theoretical and practical guide. 
+Routledge.
+Carter S, Straits KJE, & Hall M (2007). Project Venture: Evaluation of an experiential, culturally 
+based approach to substance abuse prevention with American Indian youth. Journal of Experiential 
+Education, 29(3), 397–400.
+Freire P (2000). Pedagogy of the oppressed (30th anniv. ed.) (Continuum).
+Guba EG, & Lincoln YS (2004). Competing paradigms in qualitative research, theories and issues. In 
+Hesse-Biber SN, & Leavy P (Eds.), Approaches to qualitative research: A reader on theory and 
+practice (pp. 17–38). Oxford University Press.
+Guest G, & MacQueen KM (Eds.). (2008). Handbook for team-based qualitative research. Altamira 
+Press.
+Gurney RM, Caniglia BS, Mix TL, & Baum KA (2015). Native American food security and traditional 
+foods: A review of the literature. Sociology Compass, 9(8), 681–693. 10.1111/soc4.12284
+Hodge DR, Limb GE, & Cross TE (2009). Moving from colonization toward balance and harmony: 
+A native American perspective on wellness. Social Work, 54(3), 211–219. https://www.jstor.org/
+stable/23719497 . [PubMed: 19530568] 
+Howard University School of Law. (2018). The removal era. https://library.law.howard.edu/
+civilrightshistory/indigenous/removal .
+Indian Health Service. (2019). Disparities. https://www.ihs.gov/newsroom/factsheets/disparities/ .McKinley Page 17
+SSM Qual Res Health . Author manuscript; available in PMC 2022 December 28.
+Author Manuscript Author Manuscript Author Manuscript Author ManuscriptJernigan VBB, Salvatore AL, Styne DM, & Winkleby M (2012). Addressing food insecurity in a 
+Native American reservation using community-based participatory research. Health Education 
+Research, 27(4), 645–655. 10.1093/her/cyr089 [PubMed: 21994709] 
+Kamal AG, Linklater R, Thompson S, Dipple J, & Ithinto Mechisowin Committee. (2015). A recipe 
+for change: Reclamation of Indigenous food sovereignty in O-Pipon-Na-Piwin Cree Nation 
+for decolonization, resource sharing, and cultural restoration. Globalizations, 12(4), 559–575. 
+10.1080/14747731.2015.1039761
+Kincheloe JL, & McLaren PL (2005). Rethinking critical theory and qualitative research. In Denzin 
+NK, & Lincoln YS (Eds.), The SAGE handbook of qualitative research (3rd ed., pp. 303–342). 
+SAGE Publications.
+Le P, & Aptekar S (2019). For American Indians, health is a human and legal right. https://
+thehealthcareblog.com/blog/2019/03/29/for-american-indians-health-is-a-human-and-legal-right/ .
+Lindholm MM (2019). Alaska Native perceptions of food, health, and community well-being: 
+Challenging nutritional colonialism. In Mihesuah DA, & Hoover E (Eds.), Indigenous food 
+sovereignty in the United States (pp. 155–172). University of Oklahoma Press.
+Linke SE (2015). Exercise-based treatments for substance use disorders: Evidence, theory, 
+and practicality. The American Journal of Drug and Alcohol Abuse, 41(1), 7–15. 
+10.3109/00952990.2014.976708 [PubMed: 25397661] 
+Livingston D (2019). Healthy Diné nation initiatives: Empowering out communities. In Mihesuah DA, 
+& Hoover E (Eds.), Indigenous food sovereignty in the United States (pp. 173–185). University of 
+Oklahoma Press.
+Louis R (2016). Food as social justice: Critical ethnography as a lens for communication 
+activism. Communication Teacher, 30(2), 87–93. https://www.tandfonline.com/doi/abs/
+10.1080/17404622.2016.1142102 .
+Lunsford L, Arthur M, & Porter C (2021). African and Native American foodways and resilience: 
+From 1619 to COVID-19. Journal of Agriculture, Food Systems, and Community Development, 
+10(4), 241–265. 10.5304/jafscd.2021.104.008 [PubMed: 34824878] 
+Maller C, Townsend M, Pryor A, Brown P, & St Leger L (2006). Healthy nature healthy people: 
+‘contact with nature’ as an upstream health promotion intervention for populations. Health 
+Promotion International, 21(1), 45–54. 10.1093/heapro/dai032 [PubMed: 16373379] 
+Masten AS, & Monn AR (2015). Child and family resilience: A call for integrated science, practice, 
+and professional training. Family Relations, 64(1), 5–21. 10.1111/fare.12103
+McKinley CE, Figley CR, Woodward S, Liddell J, Billiot S, Comby N, & Sanders S (2019). 
+Community-engaged and culturally relevant research to develop mental and behavioral health 
+interventions with American Indian and Alaska Natives. American Indian and Alaska Native 
+Mental Health Research, 26(3), 79–103. 10.5820/aian.2603.2019.79
+McKinley CE, Temple C, Lesesne RS, & Rodning C (2020). Family as the conduit to promote 
+indigenous enculturation and wellness: “I wish I had learned earlier”: Food and cultural traditions. 
+Journal of Evidence-Based Social Work, 17(1), 1–23. 10.1080/26408066.2019.1617213 [PubMed: 
+32133410] 
+McKinley CE & Theall KP (2021). Weaving Healthy Families Program: Promoting resilience 
+while reducing violence and substance use. Research on Social Work Practice. 31 (5),476–492. 
+(Published online March 18, 2021; Issue published July 1, 2021) doi:10.1177/1049731521998441. 
+[PubMed: 34257501] 
+Mihesuah DA (2019). Searching for Haknip Achuma (good health) : Challenges to food sovereignty 
+initiatives in Oklahoma. In Mihesuah DA, & Hoover E (Eds.), Indigenous food sovereignty in the 
+United States (pp. 94–121). University of Oklahoma Press.
+Mihesuah DA, & Hoover E (Eds.). (2019). Indigenous food sovereignty in the United States. 
+University of Oklahoma Press.
+National Libraries of Medicine. (2022). Congress creates reservations to manage Native peoples. 
+https://www.nlm.nih.gov/nativevoices/timeline/317.html .
+Overbey TA, & Diekmann F (2021). Nature-based interventions for vulnerable youth: 
+A scoping review. International Journal of Environmental Health Research, 1–39. 
+10.1080/09603123.2021.1998390McKinley Page 18
+SSM Qual Res Health . Author manuscript; available in PMC 2022 December 28.
+Author Manuscript Author Manuscript Author Manuscript Author ManuscriptRedmond LC, Jock B, Gadhoke P, Chiu DT, Christiansen K, Pardilla M, Swarts J, Platero H, Caulfield 
+LE, & Gittelsohn J (2019). OPREVENT (obesity prevention and evaluation of InterVention 
+effectiveness in NaTive north Americans): Design of a multilevel, multicomponent obesity 
+intervention for native American adults and households. Current Developments in Nutrition, 
+3(Supplement 2), 81–93. 10.1093/cdn/nzz009 [PubMed: 31453430] 
+Schultz K, Walters KL, Beltran R, Stroud S, & Johnson-Jennings M (2016). I’m stronger than I 
+thought”: Native women reconnecting to body, health, and place. Health & Place, 40, 21–28. 
+10.1016/j.healthplace.2016.05.001 [PubMed: 27164432] 
+U.S. Department of Health and Human Services, Office of Minority Health. (2020). Obesity and 
+American Indian. https://minorityhealth.hhs.gov/omh/browse.aspx?lvl=4&lvlid=40 .
+Walters KL, Mohammed SA, Evans-Campbell T, Beltrán RE, Chae DH, & Duran B (2011). Bodies 
+don’t just tell stories, they tell histories: Embodiment of historical trauma among American 
+Indians and Alaska Natives. Du Bois Review, 8(1), 179–189. 10.1017/S1742058X1100018X 
+[PubMed: 29805469] 
+Wexler L (2014). Looking across three generations of Alaska Natives to explore how culture 
+fosters Indigenous resilience. Transcultural Psychiatry, 51(1), 73–92. 10.1177/1363461513497417 
+[PubMed: 24014514] McKinley Page 19
+SSM Qual Res Health . Author manuscript; available in PMC 2022 December 28.
+Author Manuscript Author Manuscript Author Manuscript Author ManuscriptAuthor Manuscript Author Manuscript Author Manuscript Author ManuscriptMcKinley Page 20
+Table 1
+Participant demographics.
+Participant demographics Qualitative ( N = 31), %
+Southeast Rural Area 16 (51.6%)
+Northwest Urban Area 15 (48.4%)
+Age (30–78 years) M = 58.6
+Number tribal 30 (96.8%)
+Female 23 (74.2%)
+Male 8 (25.8%)
+Marital Status
+ Single 4 (12.9%)
+ Divorced 8 (25.8%)
+ Married/Domestic Partner 13(41.9%)
+ Widowed 6 (19.4%)
+Number of children (range = 0–10) M = 3.39
+Number of siblings (range = 0–13) M = 5.27
+Education
+ Less than high school 2 (6.5%)
+ High school or equivalent 6 (19.4%)
+ Some college/vocational degree 10 (32.2%)
+ Associate’s 1 (3.2%)
+ Bachelor’s degree 8 (25.8%)
+ Master’s degree or higher 4 (12.9%)
+Number who engaged in Member-Checks 25 (80.6%)
+Note. M  indicates mean.
+SSM Qual Res Health . Author manuscript; available in PMC 2022 December 28.
