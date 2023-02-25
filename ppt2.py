@@ -46,7 +46,11 @@ def newPicture(keyword):
     # print(img_url)
 
     # Download the image from the URL
-    response = requests.get(url)
+    try:
+        response = requests.get(url)
+    except (AttributeError) as e:
+        print(e)
+        return [None, None]
     img_data = response.content
 
     # Create an image object using BytesIO

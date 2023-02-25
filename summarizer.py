@@ -32,7 +32,7 @@ def showPaperSummary(paperContent, prs):
     tldr_tag = "\n tl;dr:"
     # openai.organization = 'organization key'
 
-    openai.api_key = "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"
+    openai.api_key = "key"
     engine_list = openai.Engine.list() # calling the engines available from the openai api 
     for page in paperContent:
         text = page.extract_text() + tldr_tag
@@ -54,10 +54,14 @@ def showPaperSummary(paperContent, prs):
 
 def summarizer(prs):
     # paperFilePath = "Research article sample.pdf"
+
+    cwd = os.getcwd()
+    files = os.listdir(cwd+"/database")
+
     configure()
     # paper_url = "https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_pdf/fe/ae/nihms-1849852.PMC9805511.pdf"
     # paperFilePath = getPaper(paper_url)
-    paperFilePath = "database/nihms-1857952.PMC9797056.pdf"
+    paperFilePath = "database/" + files[0]
     paperContent = pdfplumber.open(paperFilePath).pages
     showPaperSummary(paperContent, prs)
 

@@ -26,7 +26,7 @@ def get_title():
         pdf.close()
         return results
 
-    list = scrape("database/nihms-1857952.PMC9797056.pdf")
+    list = scrape("database/" + files[0])
     i = 1
     title1 = list[0][0]
     while(list[i][1] == list[i-1][1]):
