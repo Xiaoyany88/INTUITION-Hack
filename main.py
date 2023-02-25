@@ -6,6 +6,7 @@ from summarizer import *
 from font_size import *
 from PIL import Image
 
+
 if __name__ == '__main__':
 
     f = open('summary.txt', 'r', encoding='utf-8')
@@ -61,15 +62,18 @@ if __name__ == '__main__':
     txBox2.text_frame.auto_size = True
 
     # Background Images
-    img_path = "database/picture_2.png"
-    im = Image.open('/var/www/examples/heroine.png')
-    im.putalpha(100)
-    left = top = Inches(0)
-    pic = slide.shapes.add_picture(img_path, left, top, width=prs.slide_width, height=prs.slide_height)
+    # img_path = "database/picture_4.png"
+    # im = Image.open(img_path).convert('RGBA')
+    # mask = Image.new('RGBA', im.size, (255, 255, 255, 0))
+    # mask.putalpha(150)
+    # im = Image.composite(im, mask, mask)
+    # im.save(img_path)
+    # left = top = Inches(0)
+    # pic = slide.shapes.add_picture(img_path, left, top, width=prs.slide_width, height=prs.slide_height)
 
     # This moves it to the background
-    slide.shapes._spTree.remove(pic._element)
-    slide.shapes._spTree.insert(2, pic._element)
+    # slide.shapes._spTree.remove(pic._element)
+    # slide.shapes._spTree.insert(2, pic._element)
 
     summarizer(prs)
 
