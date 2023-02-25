@@ -71,6 +71,14 @@ slide.shapes._spTree.insert(2, pic._element)
 
 counter = summarizer()
 print(counter)
-print("hello")
+
+
+
+
+for i in range(counter):
+    new_slide = prs.slides.add_slide(slide_layout)
+
+
+
 
 prs.save('example.pptx')
