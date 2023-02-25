@@ -3,8 +3,9 @@ import re
 import os
 from dotenv import load_dotenv
 
-load_dotenv()
-openai.api_key = os.getenv("API_KEY")
+
+
+openai.api_key = "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"
 
 # Open the file and read its contents
 with open('summary.txt', 'r') as file:
@@ -15,7 +16,7 @@ text = str(data)
 
 # Set up the OpenAI GPT-3 model and prompt
 model_engine = "text-davinci-002"
-prompt = "Identify the key points in the following text:\n\n" + text
+prompt = "Identify the key points in the following text based on the heading:\n\n" + text
 
 # Set up the OpenAI API request
 response = openai.Completion.create(

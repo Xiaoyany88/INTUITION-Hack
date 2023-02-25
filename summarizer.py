@@ -7,8 +7,7 @@ import os
 
 from dotenv import load_dotenv
 
-def configure():
-    load_dotenv()
+
 def getPaper(paper_url, filename="random_paper1.pdf"):
     """
     Downloads a paper from it's arxiv page and returns
