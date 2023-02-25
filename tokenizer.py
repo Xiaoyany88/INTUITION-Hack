@@ -2,7 +2,8 @@
 import spacy
 
 # Load the English language model
-nlp = spacy.load('en_core_web_sm')
+nlp = spacy.load("en_core_web_sm")
+
 
 # Process a sentence
 text = "The quick brown fox jumps over the lazy dog."
