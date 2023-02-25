@@ -6,7 +6,15 @@ from font_size import *
 import requests
 from bs4 import BeautifulSoup
 from io import BytesIO
+import nltk
+from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize
+from bing_image_urls import bing_image_urls
+from PIL import Image
 
+# nltk.download('averaged_perceptron_tagger')
+# nltk.download('punkt')
+# creates a new ppt slide, taking the presentation to be added to and text to be added in the slide as parameters
 def new_slide(prs, text):
     slide = prs.slides.add_slide(prs.slide_layouts[6])
 
@@ -23,6 +31,72 @@ def new_slide(prs, text):
 
     txBox1.text_frame.word_wrap = True
     txBox1.text_frame.auto_size = True
+
+    # Tokenize the sentence into words
+    words = word_tokenize(text)
+
+    # Remove stop words from the list of words
+    stop_words = set(stopwords.words('english'))
+    words = [item for item in words if item.lower() not in stop_words]
+
+    # Get the part of speech for each word
+    pos_tags = nltk.pos_tag(words)
+
+    # Extract keywords based on the part of speech
+    keywords = [word for word, pos in pos_tags if pos in ['NN', 'NNS', 'NNP', 'NNPS']]
+    if keywords == []:
+        return
+
+    index = 0
+    if len(keywords) > 3:
+        repeats = 3
+    else:
+        repeats = len(keywords)
+    for i in range(repeats):
+        image, url = newPicture(keywords[i])
+        if image == None:
+            return
+        response = requests.get(url)
+        img_data = response.content
+        left = Inches(0)
+        top = Inches(0)
+        # try:
+        #     pic = slide.shapes.add_picture(image, left, top)
+        # except Image.UnidentifiedImageError as e:
+        #     print(e)
+        #     return
+        if url.split(".")[-1] == "jpg":
+
+            try:
+                with open(f"database/{keywords[i]}.jpg", "wb") as file:
+                    file.write(img_data)
+                jpg_image = Image.open(f"database/{keywords[i]}.jpg")
+                im = jpg_image.convert("RGBA")
+                im.save(f"database/{keywords[i]}.png")
+            except (AttributeError, Image.UnidentifiedImageError, IndexError, FileNotFoundError) as e:
+                print(e)
+                if i > repeats-2:
+                    return
+                continue
+            index = i
+
+
+    path = f"database/{keywords[index]}.png"
+    with open(f"database/{keywords[index]}.png", "wb") as file:
+        file.write(img_data)
+    # pic.save(path)
+
+    img = Image.open(f"database/{keywords[index]}.png").convert("RGBA")
+    mask = Image.new('RGBA', img.size, (255, 255, 255, 0))
+    mask.putalpha(150)
+    im = Image.composite(img, mask, mask)
+    im.save(path)
+    left = top = Inches(0)
+    pic = slide.shapes.add_picture(path, left, top, width=prs.slide_width, height=prs.slide_height)
+
+    # move to back
+    slide.shapes._spTree.remove(pic._element)
+    slide.shapes._spTree.insert(2, pic._element)
 
 # searches the internet using "keyword" and returns the picture to be put in the slide
 def newPicture(keyword):
