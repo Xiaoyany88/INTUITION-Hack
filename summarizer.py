@@ -29,7 +29,7 @@ def showPaperSummary(paperContent):
     tldr_tag = "\n tl;dr:"
     # openai.organization = 'organization key'
 
-    openai.api_key = "insert api key"
+    openai.api_key = "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"
     engine_list = openai.Engine.list() # calling the engines available from the openai api 
     counter = 0
     for page in paperContent:    
