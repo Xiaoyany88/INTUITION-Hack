@@ -27,11 +27,14 @@ def new_slide(prs, text):
 # searches the internet using "keyword" and returns the picture to be put in the slide
 def newPicture(keyword):
     # url = f"https://www.google.com/search?q={keyword}&tbm=isch"
-    try:
-        url = bing_image_urls(keyword, limit=1)[0]
-    except Image.AttributeError as e:
-        print(e)
-        return [None, None]
+    for i in range(3):
+        try:
+            url = bing_image_urls(keyword, limit=3)[i]
+        except (AttributeError, IndexError) as e:
+            print(e)
+            if i > 1:
+                return [None, None]
+
 
     # Send a request to the search URL and get the HTML response
     # headers = {"User-Agent": "Mozilla/5.0"}
